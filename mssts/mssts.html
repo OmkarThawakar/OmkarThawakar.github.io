@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MSSTS-ECCV2022</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        
+         <a class="navbar-brand" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="16" alt="" loading="lazy"
+            style="margin-top: -3px;" /> 
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#intro">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">Learn Bootstrap 5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB UI KIT</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-3 me-lg-0"> 
+              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i> 
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar --> 
+
+    <!-- Jumbotron -->
+    <div id="intro" class="p-5 text-center bg-light">
+      <h1 class="mb-9 h2">Video Instance Segmentation via Multi-Scale Spatio Temporal Split Attention Transformer</h1>
+      <h3 class="mb-6 h4"> <a class="text-success" href="https://eccv2022.ecva.net/">ECCV-2022 </a> </h3>
+      <hr>
+      <h3 class="mb-6 h5"> 
+        <a href="https://omkarthawakar.github.io">Omkar Thawakar</a> 
+        <sup>1</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Sanath Narayan</a> 
+        <sup>2</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Jiale Cao </a> 
+        <sup>3</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Hisham Chokkal </a> 
+        <sup>1</sup>
+        &nbsp;&nbsp;
+      </h3>
+      <h3 class="mb-6 h5"> 
+        <a href="https://omkarthawakar.github.io">Rao Muhammad Anwer</a> 
+        <sup>1</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Muhammad Haris Khan</a> 
+        <sup>2</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Salman Khan </a> 
+        <sup>3</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Hisham Chokkal </a> 
+        <sup>1</sup>
+        &nbsp;&nbsp;
+      </h3>
+      <h3 class="mb-6 h5"> 
+        <a href="https://omkarthawakar.github.io">Michael Felsberg</a> 
+        <sup>4</sup>
+        &nbsp;&nbsp;
+        <a href="https://omkarthawakar.github.io">Fahad Shahbaz Khan</a> 
+        <sup>1,4</sup>
+        &nbsp;&nbsp;
+      </h3>
+
+      <p>
+
+        <br>
+        <sup>1</sup> Mohammad Bin Zayed University of Artificial Intelligence, UAE
+        <br> 
+        <sup>2</sup> Inception Institute of Artificial Intelligence, UAE
+        <br>
+        <sup>3</sup> Tianjin University, China
+        <br> 
+        <sup>4</sup> Linköping University, Sweden
+        <br>
+        <br>
+      </p>
+
+      <button type="button" class="btn btn-primary px-3 me-1 bg-success" style="background-color: #25a862;">
+        <i class="fab ">Arxiv</i>
+      </button>
+      <button type="button" class="btn btn-primary px-3 me-1 " style="background-color: #55acee;">
+        <i class="fab ">Poster</i>
+      </button>
+      <button type="button" class="btn btn-primary px-3 me-1 bg-dark" style="background-color: #0082ca;">
+        <i class="fab ">Code </i>
+      </button>
+      <button type="button" class="btn btn-primary px-3 me-1 bg-warning">
+        <i class="fas ">Demo</i>
+      </button>
+      <button type="button" class="btn btn-primary px-3 me-1 bg-danger">
+        <i class="fas ">Supplementary</i>
+      </button>
+      
+
+    </div>
+    <!-- Jumbotron -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-4 mb-5">
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-12 mb-4">
+
+          <!--Section: Text-->
+          <section class="text-center border-bottom mb-3">
+
+            <img src="../images/Architecture_diagram_png.png" class="img-fluid shadow-1 text-center mb-3"
+              alt="" />
+
+            <p class="mb-12">
+                (a) Our MS-STS VIS architecture comprises a backbone, a transformer
+                encoder-decoder and a instance matching and segmentation block. Here, our key
+                contributions are: (i) a novel MS-STS attention module in the encoder to capture
+                spatio-temporal feature relationships at multiple scales across frames, (ii) a temporal attention block in the decoder for enhancing the temporal consistency of
+                the box queries and (iii) an adversarial loss for enhancing foreground-background
+                (fg-bg) separability. Specifically, the MS-STS attention module (b) attends to the
+                input backbone features by employing intra- and inter-scale temporal attentions
+                to generate enriched features which are then fused with standard baseline features. While the intra-scale temporal attention block (c) enriches features across
+                frames within a given scale, its inter-scale counterpart (d) progressively attends
+                to multiple spatial scales across frames to obtain spatio-temporally enriched features. These enriched features are further improved using an adversarial loss
+                (e) to enhance fg-bg separability. The resulting encoder features along with the
+                temporally consistent instance features from the decoder are used within the
+                matching and segmentation block for the video instance mask prediction.
+            </p>
+          </section>
+          <!--Section: Text-->
+
+
+          <!--Section: Post data-mdb-->
+          <section class="border-bottom mb-4">
+            
+            <!-- Gallery -->
+            <div class="row">
+              <h3 class="mb-6 h4 text-center mb-3"> Quanlitative Results on Youtube-VIS 2019-2021 validation set. </h3>
+
+              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/12.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/14.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/13.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/17.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/3.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/5.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/18.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/21.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/24.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/36.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/39.mp4" type="video/mp4" />
+                </video>
+
+                <video class="img-fluid" autoplay loop muted>
+                  <source src="img/40.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <!-- Gallery -->
+          </section>
+          <!--Section: Post data-mdb-->
+
+          <!--Section: Text-->
+          <section class="text-center border-bottom mb-3">
+            <p class="text-bold">
+              Qualitative results obtained by our MS-STS VIS framework on seven
+              example videos in the Youtube-VIS 2019 & 2021 val set. Our MS-STS VIS achieves
+              promising video mask prediction in various challenging scenarios including, fast
+              motion, scale change, aspect-ratio change, multiple instances of same class.
+            </p>
+
+            <hr>
+            <h3 class="mb-6 h4 text-center mb-3"> Quantative Results on Youtube-VIS 2019 validation set. </h3>
+
+            <img src="img/2019_results.png" class="img-fluid shadow-1-strong text-center mb-3"
+              alt="" />
+
+            <p class="mb-12">
+              State-of-the-art comparison on YouTube-VIS 2019 val set. Our MRSTS VIS consistently outperforms the state-of-the-art results reported in literature. When using the ResNet-50 backbone, MS-STS VIS achieves overall mask
+              AP score of 50.1% with an absolute gain of 2.7% over the best existing SeqFormer, while being comparable in terms of model size and speed (SeqFormer:
+              11 FPS vs. Ours: 10 FPS). Similarly, when using the ResNet-101 backbone, our
+              MS-STS VIS achieves overall mask AP of 51.1%. Further, MS-STS VIS achieves
+              the best accuracy reported on this dataset with a mask AP of 61.0% and outperforms SeqFormer with an absolute gain of 1.7%, using the same Swin-L backbone
+            </p>
+          </section>
+          <!--Section: Text-->
+
+          <!--Section: Author-->
+          <section class=" border-bottom mb-12 pb-4">
+            <div class="row">
+              <div class="col-6">
+                <img src="img/2021_results.png"
+                  class="img-fluid " alt="" />
+              </div>
+
+              <div class="col-6">
+                <p class="mb-2"><strong>Quantative Results on Youtube-VIS 2021 validation set.</strong></p>
+                <p>
+                  State-of-the-art comparison on YouTube-VIS 2021 val set. All results
+                  are reported using the same ResNet-50 backbone. Our MS-STS VIS achieves
+                  state-of-the-art results with an overall mask AP of 42.2% and an absolute gain
+                  of 2.8% over the best existing SeqFormer at a higher overlap threshold of AP75.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!--Section: Author-->
+
+          <!--Section: Corousal for Attentiion Map-->
+          <div id="carouselExampleCaptions" class="carousel slide mb-3" data-mdb-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-mdb-target="#carouselExampleCaptions"
+                data-mdb-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-mdb-target="#carouselExampleCaptions"
+                data-mdb-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-mdb-target="#carouselExampleCaptions"
+                data-mdb-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape"/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!--Section: Corousal for Attentiion Map-->
+
+
+          <!--Section: Comments-->
+          <section class="border-bottom mb-3">
+            <p class="text-center"><strong>Comments: 3</strong></p>
+
+            <!-- Comment -->
+            <div class="row mb-4">
+              <div class="col-2">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(24).jpg"
+                  class="img-fluid shadow-1-strong rounded" alt="" />
+              </div>
+
+              <div class="col-10">
+                <p class="mb-2"><strong>Marta Dolores</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
+                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
+                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
+                </p>
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div class="row mb-4">
+              <div class="col-2">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg"
+                  class="img-fluid shadow-1-strong rounded" alt="" />
+              </div>
+
+              <div class="col-10">
+                <p class="mb-2"><strong>Valeria Groove</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
+                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
+                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
+                </p>
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div class="row mb-4">
+              <div class="col-2">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg"
+                  class="img-fluid shadow-1-strong rounded" alt="" />
+              </div>
+
+              <div class="col-10">
+                <p class="mb-2"><strong>Antonia Velez</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
+                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
+                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
+                </p>
+              </div>
+            </div>
+          </section>
+          <!--Section: Comments-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+      <a role="button" class="btn btn-primary btn-lg m-2"
+        href="https://mbzuai.ac.ae/" rel="nofollow" target="_blank">
+        MBZUAI, UAE
+      </a>
+      <a role="button" class="btn btn-primary btn-lg m-2" href="https://mbzuai-cv-lab.netlify.app/" target="_blank">
+        CVPR Lab, MBZUAI
+      </a>
+    </div>
+
+    <hr class="m-0" />
+
+    <div class="text-center py-4 align-items-center">
+      <p>Follow me on social media</p>
+      <a href="https://www.youtube.com/channel/UC2bSA6pe3HZSZXvAAtdQDBg" class="btn btn-primary m-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com/omkar.thawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/omkar_thawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/OmkarThawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-dark" href="https://omkarthawakar.github.io/">omkarthawakar.github.io</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

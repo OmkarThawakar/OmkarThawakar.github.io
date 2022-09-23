@@ -30,6 +30,25 @@
           margin-top: 45px;
         }
       }
+      
+      .testimonial-card .card-up {
+        height: 120px;
+        overflow: hidden;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+      }
+      
+      .aqua-gradient {
+        background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+      }
+      
+      .testimonial-card .avatar {
+        width: 120px;
+        margin-top: -60px;
+        overflow: hidden;
+        border: 5px solid #fff;
+        border-radius: 50%;
+      }
     </style>
 
     <!-- Navbar -->
@@ -47,36 +66,33 @@
         <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#intro">Home</a>
+              <a class="nav-link" aria-current="page" href="https://omkarthawakar.github.io">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
-                target="_blank">Learn Bootstrap 5</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB UI KIT</a>
+              <a class="nav-link" href="#" rel="nofollow"
+                target="_blank">MSSTS</a>
             </li>
           </ul>
 
           <ul class="navbar-nav d-flex flex-row">
             <li class="nav-item me-3 me-lg-0"> 
-              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+              <a class="nav-link" href="https://www.youtube.com/channel/UC2bSA6pe3HZSZXvAAtdQDBg" rel="nofollow"
                 target="_blank">
                 <i class="fab fa-youtube"></i> 
               </a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+              <a class="nav-link" href="https://www.facebook.com/omkar.thawakar" rel="nofollow" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+              <a class="nav-link" href="https://twitter.com/omkar_thawakar" rel="nofollow" target="_blank">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
             <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+              <a class="nav-link" href="https://github.com/OmkarThawakar" rel="nofollow" target="_blank">
                 <i class="fab fa-github"></i>
               </a>
             </li>
@@ -173,7 +189,25 @@
         <div class="col-md-12 mb-4">
 
           <!--Section: Text-->
+          <section class="text-center border-bottom mb-3 fw-light">
+
+            <p class="mb-12">
+              We proposed a transformer-based video instance segmentation framework, named
+              MS-STS VIS, which comprises a novel multi-scale spatio-temporal split attention
+              (MS-STS) module to effectively capture spatio-temporal feature relationships at
+              multiple scales across frames in a video. We further introduced an auxiliary discriminator network during training that strives to enhance fg-bg separability
+              within the multi-scale spatio-temporal feature space. Our MS-STS VIS specifically tackles target appearance deformations due to real-world challenges such
+              as, scale variation, aspect-ratio change and fast motion in videos. Our extensive
+              experiments on two datasets reveal the benefits of the proposed contributions,
+              achieving state-of-the-art performance on both benchmarks.
+            </p>
+          </section>
+          <!--Section: Text-->
+
+          <!--Section: Text-->
           <section class="text-center border-bottom mb-3">
+
+            <h3 class="mb-6 h4 text-center mb-3"> Our Method </h3>
 
             <img src="../images/Architecture_diagram_png.png" class="img-fluid shadow-1 text-center mb-3"
               alt="" />
@@ -310,7 +344,7 @@
           <!--Section: Author-->
 
           <!--Section: Corousal for Attentiion Map-->
-          <div id="carouselExampleCaptions" class="carousel slide mb-3" data-mdb-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel slide mb-3 carousel-dark" data-mdb-ride="carousel">
             <div class="carousel-indicators">
               <button
                 type="button"
@@ -335,24 +369,24 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape"/>
+                <img src="img/Attention_Ablation.jpg" class="d-block w-100" alt="Wild Landscape"/>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
+                  <h5>Encoder Attention Map Comparison</h5>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
+                <img src="img/qualitative_results_ours.jpg" class="d-block w-100" alt="Camera"/>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h5>Qualitative Results</h5>
+                  <p>Youtube VIS 2019 val set.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
+                <img src="img/qualitative_results_yt21_ours.jpg" class="d-block w-100" alt="Exotic Fruits"/>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  <h5>Qualitative Results</h5>
+                  <p>Youtube VIS 2021 val set.</p>
                 </div>
               </div>
             </div>
@@ -366,65 +400,160 @@
             </button>
           </div>
 
+          <hr>
           <!--Section: Corousal for Attentiion Map-->
 
 
-          <!--Section: Comments-->
-          <section class="border-bottom mb-3">
-            <p class="text-center"><strong>Comments: 3</strong></p>
+          <!--Section: Post data-mdb-->
+          <section class="border-bottom mb-4">
+            
+            <!-- Gallery -->
+            <div class="row">
+              <h3 class="mb-6 h4 text-center mb-3"> More About Authors </h3>
 
-            <!-- Comment -->
-            <div class="row mb-4">
-              <div class="col-2">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(24).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
+              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                
+                  <!-- Comment -->
+                  <div class="card testimonial-card mt-2 mb-3">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/omkar_thawakar.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Omkar Thawakar</h4>
+                      <hr>
+                      <p>Researcher, MBZUAI</p>
+                    </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="card testimonial-card mt-2 mb-3">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/hisham_cholakkal.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Hisham Cholakkal</h4>
+                      <hr>
+                      <p>Assistant Professor, MBZUAI</p>
+                    </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="card testimonial-card mt-2 mb-3">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/salman_khan.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Salman Khan</h4>
+                      <hr>
+                      <p>Associate Professor, MBZUAI</p>
+                    </div>
+                  </div>
+                  
               </div>
 
-              <div class="col-10">
-                <p class="mb-2"><strong>Marta Dolores</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
+              <div class="col-lg-4 mb-4 mb-lg-0">
+
+                <!-- Comment -->
+                <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card-up aqua-gradient"></div>
+                  <div class="avatar mx-auto white">
+                    <img src="authors/sanath_narayan.jpeg" class="rounded-circle img-fluid"
+                      alt="woman avatar">
+                  </div>
+                  <div class="card-body text-center">
+                    <h4 class="card-title font-weight-bold">Sanath Narayan</h4>
+                    <hr>
+                    <p>Research Scientist, IIAI</p>
+                  </div>
+                </div>
+
+                <!-- Comment -->
+                <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card-up aqua-gradient"></div>
+                  <div class="avatar mx-auto white">
+                    <img src="authors/anwer_rao.jpg" class="rounded-circle img-fluid"
+                      alt="woman avatar">
+                  </div>
+                  <div class="card-body text-center">
+                    <h4 class="card-title font-weight-bold">Rao Muhammad Anwer</h4>
+                    <hr>
+                    <p>Assistant Professor, MBZUAI</p>
+                  </div>
+                </div>
+                
+
+                <!-- Comment -->
+                <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card-up aqua-gradient"></div>
+                  <div class="avatar mx-auto white">
+                    <img src="authors/michael_felsberg.jpg" class="rounded-circle img-fluid"
+                      alt="woman avatar">
+                  </div>
+                  <div class="card-body text-center">
+                    <h4 class="card-title font-weight-bold">Michael Felzberg</h4>
+                    <hr>
+                    <p>Professor, Linköping University</p>
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0">
+
+                <!-- Comment -->
+                <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card-up aqua-gradient"></div>
+                  <div class="avatar mx-auto white">
+                    <img src="authors/jiale_cao.jpg" class="rounded-circle img-fluid"
+                      alt="woman avatar">
+                  </div>
+                  <div class="card-body text-center">
+                    <h4 class="card-title font-weight-bold">Jiale Cao</h4>
+                    <hr>
+                    <p>Assistant Professor, Tianjin University</p>
+                  </div>
+                </div>
+
+                <!-- Comment -->
+                <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card-up aqua-gradient"></div>
+                  <div class="avatar mx-auto white">
+                    <img src="authors/haris_khan.jpg" class="rounded-circle img-fluid"
+                      alt="avatar">
+                  </div>
+                  <div class="card-body text-center">
+                    <h4 class="card-title font-weight-bold">Muhammad Haris Khan</h4>
+                    <hr>
+                    <p>Assistant Professor, MBZUAI</p>
+                  </div>
+                </div>
+                
+
+                <!-- Comment -->
+                <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card-up aqua-gradient"></div>
+                  <div class="avatar mx-auto white">
+                    <img src="authors/fahad_khan.jpg" class="rounded-circle img-fluid"
+                      alt="author avatar">
+                  </div>
+                  <div class="card-body text-center">
+                    <h4 class="card-title font-weight-bold">Fahad Shahbaz Khan</h4>
+                    <hr>
+                    <p>Associate Professor, MBZUAI</p>
+                  </div>
+                </div>
+                
               </div>
             </div>
-
-            <!-- Comment -->
-            <div class="row mb-4">
-              <div class="col-2">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
-              </div>
-
-              <div class="col-10">
-                <p class="mb-2"><strong>Valeria Groove</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
-              </div>
-            </div>
-
-            <!-- Comment -->
-            <div class="row mb-4">
-              <div class="col-2">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg"
-                  class="img-fluid shadow-1-strong rounded" alt="" />
-              </div>
-
-              <div class="col-10">
-                <p class="mb-2"><strong>Antonia Velez</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est ab iure
-                  inventore dolorum consectetur? Molestiae aperiam atque quasi consequatur aut?
-                  Repellendus alias dolor ad nam, soluta distinctio quis accusantium!
-                </p>
-              </div>
-            </div>
+            <!-- Gallery -->
           </section>
-          <!--Section: Comments-->
+          <!--Section: Post data-mdb-->
 
         </div>
         <!--Grid column-->

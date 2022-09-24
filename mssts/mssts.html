@@ -55,10 +55,6 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <div class="container-fluid">
         
-         <a class="navbar-brand" target="_blank" href="https://mdbootstrap.com/docs/standard/">
-          <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="16" alt="" loading="lazy"
-            style="margin-top: -3px;" /> 
-        </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
           aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
@@ -191,7 +187,7 @@
           <!--Section: Text-->
           <section class="text-center border-bottom mb-3 fw-light">
 
-            <p class="mb-12">
+            <p class="mb-12 note note-info">
               We proposed a transformer-based video instance segmentation framework, named
               MS-STS VIS, which comprises a novel multi-scale spatio-temporal split attention
               (MS-STS) module to effectively capture spatio-temporal feature relationships at
@@ -212,7 +208,7 @@
             <img src="../images/Architecture_diagram_png.png" class="img-fluid shadow-1 text-center mb-3"
               alt="" />
 
-            <p class="mb-12">
+            <p class="mb-12 note note-light">
                 (a) Our MS-STS VIS architecture comprises a backbone, a transformer
                 encoder-decoder and a instance matching and segmentation block. Here, our key
                 contributions are: (i) a novel MS-STS attention module in the encoder to capture
@@ -299,7 +295,7 @@
 
           <!--Section: Text-->
           <section class="text-center border-bottom mb-3">
-            <p class="text-bold">
+            <p class="text-bold note note-light">
               Qualitative results obtained by our MS-STS VIS framework on seven
               example videos in the Youtube-VIS 2019 & 2021 val set. Our MS-STS VIS achieves
               promising video mask prediction in various challenging scenarios including, fast
@@ -312,7 +308,7 @@
             <img src="img/2019_results.png" class="img-fluid shadow-1-strong text-center mb-3"
               alt="" />
 
-            <p class="mb-12">
+            <p class="mb-12 note note-light">
               State-of-the-art comparison on YouTube-VIS 2019 val set. Our MRSTS VIS consistently outperforms the state-of-the-art results reported in literature. When using the ResNet-50 backbone, MS-STS VIS achieves overall mask
               AP score of 50.1% with an absolute gain of 2.7% over the best existing SeqFormer, while being comparable in terms of model size and speed (SeqFormer:
               11 FPS vs. Ours: 10 FPS). Similarly, when using the ResNet-101 backbone, our
@@ -332,7 +328,7 @@
 
               <div class="col-6">
                 <p class="mb-2"><strong>Quantative Results on Youtube-VIS 2021 validation set.</strong></p>
-                <p>
+                <p class="mb-2 note-light">
                   State-of-the-art comparison on YouTube-VIS 2021 val set. All results
                   are reported using the same ResNet-50 backbone. Our MS-STS VIS achieves
                   state-of-the-art results with an overall mask AP of 42.2% and an absolute gain
@@ -400,21 +396,18 @@
             </button>
           </div>
 
-          <hr>
+          <hr class="mb-6">
           <!--Section: Corousal for Attentiion Map-->
 
-
-          <!--Section: Post data-mdb-->
-          <section class="border-bottom mb-4">
-            
-            <!-- Gallery -->
-            <div class="row">
-              <h3 class="mb-6 h4 text-center mb-3"> More About Authors </h3>
-
-              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <!--Section: Corousal for Authors-->
+          <div id="carouselExampleInterval" class="carousel slide" data-mdb-ride="carousel">
+            <h3 class="h4 text-center mb-3"> More About Authors </h3>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-mdb-interval="10000">
                 
+                <div class="row">
                   <!-- Comment -->
-                  <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card testimonial-card col">
                     <div class="card-up aqua-gradient"></div>
                     <div class="avatar mx-auto white">
                       <img src="authors/omkar_thawakar.jpg" class="rounded-circle img-fluid"
@@ -424,11 +417,84 @@
                       <h4 class="card-title font-weight-bold">Omkar Thawakar</h4>
                       <hr>
                       <p>Researcher, MBZUAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://omkarthawakar.github.io/" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="https://twitter.com/omkar_thawakar" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                      
                     </div>
                   </div>
 
                   <!-- Comment -->
-                  <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card testimonial-card col ">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/sanath_narayan.jpeg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Sanath Narayan</h4>
+                      <hr>
+                      <p>Research Scientist, IIAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://sites.google.com/view/sanath-narayan" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.co.in/citations?user=Bx7EFGoAAAAJ&hl=en" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="https://twitter.com/NarayanSanath" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                      
+                    </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="card testimonial-card col ">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/jiale_cao.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Jiale Cao</h4>
+                      <hr>
+                      <p>Assistant Professor, TJU</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://jialecao001.github.io/" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=6pPP1MQAAAAJ&hl=zh-CN" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="https://twitter.com/JialeCao1" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+              <div class="carousel-item" data-mdb-interval="2000">
+                
+                <div class="row">
+                  <!-- Comment -->
+                  <div class="card testimonial-card col">
                     <div class="card-up aqua-gradient"></div>
                     <div class="avatar mx-auto white">
                       <img src="authors/hisham_cholakkal.jpg" class="rounded-circle img-fluid"
@@ -438,11 +504,81 @@
                       <h4 class="card-title font-weight-bold">Hisham Cholakkal</h4>
                       <hr>
                       <p>Assistant Professor, MBZUAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://mbzuai.ac.ae/study/faculty/hisham-cholakkal/" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=bZ3YBRcAAAAJ&hl=zh-CN" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="#" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
                     </div>
                   </div>
 
                   <!-- Comment -->
-                  <div class="card testimonial-card mt-2 mb-3">
+                  <div class="card testimonial-card col ">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/anwer_rao.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Rao Muhammad Anwer</h4>
+                      <hr>
+                      <p>Assistant Professor, MBZUAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://mbzuai.ac.ae/study/faculty/rao-muhammad-anwer/" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=_KlvMVoAAAAJ&hl=zh-CN" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="#" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="card testimonial-card col ">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/haris_khan.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Muhammad Haris Khan</h4>
+                      <hr>
+                      <p>Assistant Professor, MBZUAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://mbzuai.ac.ae/study/faculty/muhammad-haris-khan/" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=ZgERfFwAAAAJ&hl=zh-CN" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="https://twitter.com/mharis8744" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+              <div class="carousel-item">
+                
+                <div class="row">
+                  <!-- Comment -->
+                  <div class="card testimonial-card col">
                     <div class="card-up aqua-gradient"></div>
                     <div class="avatar mx-auto white">
                       <img src="authors/salman_khan.jpg" class="rounded-circle img-fluid"
@@ -452,108 +588,89 @@
                       <h4 class="card-title font-weight-bold">Salman Khan</h4>
                       <hr>
                       <p>Associate Professor, MBZUAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://salman-h-khan.github.io/" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=M59O9lkAAAAJ&hl=zh-CN" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="https://twitter.com/KhanSalmanH" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="card testimonial-card col ">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/michael_felsberg.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Michael Felsberg</h4>
+                      <hr>
+                      <p>Professor, Linköping University</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://liu.se/en/employee/micfe03" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.com/citations?user=lkWfR08AAAAJ&hl=zh-CN" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="#" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="card testimonial-card col ">
+                    <div class="card-up aqua-gradient"></div>
+                    <div class="avatar mx-auto white">
+                      <img src="authors/fahad_khan.jpg" class="rounded-circle img-fluid"
+                        alt="woman avatar">
+                    </div>
+                    <div class="card-body text-center">
+                      <h4 class="card-title font-weight-bold">Fahad Shahbaz Khan</h4>
+                      <hr>
+                      <p>Associate Professor, MBZUAI</p>
+                      <!-- Facebook -->
+                      <a style="color: #3b5998;" href="https://sites.google.com/view/fahadkhans/home" role="button"
+                      ><i class="fas fa-user-check me-2"></i
+                      ></a>
+                      <!-- Google -->
+                      <a style="color: #dd4b39;" href="https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en" role="button"
+                      ><i class="fab fa-google fa-lg me-2"></i
+                      ></a>
+                      <!-- Twitter -->
+                      <a style="color: #55acee;" href="#" role="button"
+                      ><i class="fab fa-twitter fa-lg me-2"></i
+                      ></a>
                     </div>
                   </div>
                   
-              </div>
-
-              <div class="col-lg-4 mb-4 mb-lg-0">
-
-                <!-- Comment -->
-                <div class="card testimonial-card mt-2 mb-3">
-                  <div class="card-up aqua-gradient"></div>
-                  <div class="avatar mx-auto white">
-                    <img src="authors/sanath_narayan.jpeg" class="rounded-circle img-fluid"
-                      alt="woman avatar">
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="card-title font-weight-bold">Sanath Narayan</h4>
-                    <hr>
-                    <p>Research Scientist, IIAI</p>
-                  </div>
                 </div>
 
-                <!-- Comment -->
-                <div class="card testimonial-card mt-2 mb-3">
-                  <div class="card-up aqua-gradient"></div>
-                  <div class="avatar mx-auto white">
-                    <img src="authors/anwer_rao.jpg" class="rounded-circle img-fluid"
-                      alt="woman avatar">
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="card-title font-weight-bold">Rao Muhammad Anwer</h4>
-                    <hr>
-                    <p>Assistant Professor, MBZUAI</p>
-                  </div>
-                </div>
-                
-
-                <!-- Comment -->
-                <div class="card testimonial-card mt-2 mb-3">
-                  <div class="card-up aqua-gradient"></div>
-                  <div class="avatar mx-auto white">
-                    <img src="authors/michael_felsberg.jpg" class="rounded-circle img-fluid"
-                      alt="woman avatar">
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="card-title font-weight-bold">Michael Felzberg</h4>
-                    <hr>
-                    <p>Professor, Linköping University</p>
-                  </div>
-                </div>
-                
-              </div>
-
-              <div class="col-lg-4 mb-4 mb-lg-0">
-
-                <!-- Comment -->
-                <div class="card testimonial-card mt-2 mb-3">
-                  <div class="card-up aqua-gradient"></div>
-                  <div class="avatar mx-auto white">
-                    <img src="authors/jiale_cao.jpg" class="rounded-circle img-fluid"
-                      alt="woman avatar">
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="card-title font-weight-bold">Jiale Cao</h4>
-                    <hr>
-                    <p>Assistant Professor, Tianjin University</p>
-                  </div>
-                </div>
-
-                <!-- Comment -->
-                <div class="card testimonial-card mt-2 mb-3">
-                  <div class="card-up aqua-gradient"></div>
-                  <div class="avatar mx-auto white">
-                    <img src="authors/haris_khan.jpg" class="rounded-circle img-fluid"
-                      alt="avatar">
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="card-title font-weight-bold">Muhammad Haris Khan</h4>
-                    <hr>
-                    <p>Assistant Professor, MBZUAI</p>
-                  </div>
-                </div>
-                
-
-                <!-- Comment -->
-                <div class="card testimonial-card mt-2 mb-3">
-                  <div class="card-up aqua-gradient"></div>
-                  <div class="avatar mx-auto white">
-                    <img src="authors/fahad_khan.jpg" class="rounded-circle img-fluid"
-                      alt="author avatar">
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="card-title font-weight-bold">Fahad Shahbaz Khan</h4>
-                    <hr>
-                    <p>Associate Professor, MBZUAI</p>
-                  </div>
-                </div>
-                
               </div>
             </div>
-            <!-- Gallery -->
-          </section>
-          <!--Section: Post data-mdb-->
+            <button class="carousel-control-prev" data-mdb-target="#carouselExampleInterval" type="button" data-mdb-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-mdb-target="#carouselExampleInterval" type="button" data-mdb-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Section: Corousal for Authors-->
+
+
 
         </div>
         <!--Grid column-->
@@ -571,7 +688,7 @@
         href="https://mbzuai.ac.ae/" rel="nofollow" target="_blank">
         MBZUAI, UAE
       </a>
-      <a role="button" class="btn btn-primary btn-lg m-2" href="https://mbzuai-cv-lab.netlify.app/" target="_blank">
+      <a style="background-color: #ffac44; role="button" class="btn btn-primary btn-lg m-2" href="https://mbzuai-cv-lab.netlify.app/" target="_blank">
         CVPR Lab, MBZUAI
       </a>
     </div>
@@ -580,19 +697,19 @@
 
     <div class="text-center py-4 align-items-center">
       <p>Follow me on social media</p>
-      <a href="https://www.youtube.com/channel/UC2bSA6pe3HZSZXvAAtdQDBg" class="btn btn-primary m-1" role="button"
+      <a style="background-color: #ed302f; href="https://www.youtube.com/channel/UC2bSA6pe3HZSZXvAAtdQDBg" class="btn btn-primary m-1" role="button"
         rel="nofollow" target="_blank">
         <i class="fab fa-youtube"></i>
       </a>
-      <a href="https://www.facebook.com/omkar.thawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
+      <a style="background-color: #3b5998; href="https://www.facebook.com/omkar.thawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
         target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://twitter.com/omkar_thawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
+      <a style="background-color: #55acee; href="https://twitter.com/omkar_thawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
         target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://github.com/OmkarThawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
+      <a style="background-color: #333333; href="https://github.com/OmkarThawakar" class="btn btn-primary m-1" role="button" rel="nofollow"
         target="_blank">
         <i class="fab fa-github"></i>
       </a>

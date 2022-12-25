@@ -448,3 +448,33 @@ popover{
 	}
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li + li {
+	margin-top: 1rem;
+}
+
+.news {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: aliceblue;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	width: calc(100% - 2rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+
+
+li.news:nth-child(even) {
+	background: honeydew;
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+li.news:nth-child(even)::before {
+	transform: rotateY(180deg);
+}

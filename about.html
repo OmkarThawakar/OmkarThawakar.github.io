@@ -1,398 +1,214 @@
-<!--
-Omkar Thawakar Portfolio.
--->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  
-  <link rel='stylesheet' href='css/style.css'>
-
-  <script type="text/javascript" src="js/script.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"> 
-  </script>
-
-  
-  <title>Omkar Thawakar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Omkar Thawakar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="container">
-    
-    <div class="logo col-md-12">
-      <div class="logo_title">
-        <div><p>Omkar Thawakar</p> <p class="corner"></p></div>
-      </div>
-      <div class="language col-12">
-        <p>Researcher, Programmer, Coder, Developer, Artist ......</p>
-      </div>
-    </div>
-    
-    
-    <nav class="navbar stifky-top navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="index.html">Omkar Thawakar <p></p></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+  <canvas id="ai-background"></canvas>
+
+  <header class="container">
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">Omkar Thawakar</a>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="about.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">About me</a>
-          <a class="nav-item nav-link" href="publications.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Publications</a>
-          <a class="nav-item nav-link" href="experience.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Experience</a>
-          <a class="nav-item nav-link" href="projects.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Projects</a>
-          <a class="nav-item nav-link" href="articles.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Articles</a>
-          <a class="nav-item nav-link" href="images/Omkar_Thawakar.pdf" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Resume</a>
-          <a class="nav-item nav-link" href="contact.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Contact</a>
-          
-          <div id="popover-content" class="hide">
-            <div class='category_list row'> 
-              <div class='category col-6'><span>Python</span></div>
-              <div class='category col-6'><span>Tensorflow</span></div>
-              <div class='category col-6'><span>PyTorch</span></div>
-              <div class='category col-6'><span>Django</span></div>
-              <div class='category col-6'><span>HTML</span></div>
-              <div class='category col-6'><span>CSS</span></div>
-              <div class='category col-6'><span>JAVASCRIPT</span></div>
-              <div class='category col-6'><span>RUBY</span></div>
-              <div class='category col-6'><span>C/C++</span></div>
-              <div class='category col-6'><span>Latex</span></div>
-              
-            </div>
-            
-          </div>
-          
-          
-        </div>
+      <div class="navbar-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="images/Omkar_Thawakar.pdf" target="_blank">CV</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </div>
     </nav>
-    
-    <!--Posts area-->
-    <div class="row content">
-      <div class="post_feed col-md-9 col-sm-12">
-        <div class="post col-12"> 
-          <div class="post_info">
-            <div class="title">
-              <h3>
-                Bio
-              </h3>
-            </div>
-            <div class="desc">
-              <p>
-                I am graduated in Computer Science and Technology at SGGSIE&T Nanded. I am currently working as a Research Assistant at IIT Ropar, India. I am interested in Deep Learning and Machine Learning to address various problems in computer science and Artifical Inteligence field.   
-              </p>
-            </div>
-          </div>
-        </div>
+  </header>
 
-        <div class="post col-12">
-          <div class="thumb">
-            <img src="images/motivation.jpeg">
-          </div>
-          <div class="post_info">
-            <div class="title">
-              <h3>
-                Research Interest
-              </h3>
-            </div>
-            <div class="desc">
-              <p>
-                My interest lies in Artificial Intelligence and Robotics and developing strategies for creating Artificial Consciousness using Reinforcement Learning and other deep learning techniques. I like to work on Deep Learning and Machine Learning to built techniques that can be used to solve complex problems in AI efficiently and with less computational manner.   
-              </p>
-              <p>
-                I am researching on Artificial Neural Network and its training optimization by predicting initial weights of network near to global minima of error plot which effectively decrease the computational cost of training. This weight initialization technique helps training of Convolutional Neural Network very fast as compared to previous techniques. Also, It is very helpful in Reinforcement Learning strategies of Robots which are trained in real time by significantly decreasing the training time of the network.
-              </p>
-              <p>
-                I have built various projects related to Artificial Neural Network's and Reinforcement Learning which includes the Reinforcement Learning of Line Follower Robot, currently working on Reinforcement training of Robotic Arm etc.
-              </p>
-            </div>
-          </div>
-        </div>
+  <main class="container">
+    <section class="animate-fade-in">
+      <h1 class="section-title">About Me</h1>
 
-        <div class="post col-12">
-          <div class="thumb">
-            <img src="images/interest.jpg">
-          </div>
-          <div class="post_info">
-            <div class="title">
-              <h3>
-                Research Motivation
-              </h3>
-            </div>
-            <div class="desc">
-              <p>
-                Deep Learning and Artificial Intelligence dominate the whole world and established its unique approach for solving many real worlds scenerios. Neural Network made a remarkable impact in classification and regression problems whereas Convolutional Neural Networks proved its efficiency in image and video processing domains. But, there is an issue of interpretability since model behaves as a 'black box', failing to explain its behavior in understanding a large amount of data. In some cases, this 'black box' behavior of deep learning models is quite acceptable. Due to this, computer science often resorts to the Bayesian perspective incorporating prior knowledge often to improve on simply “throwing” more layers and data at a model.   
-              </p>
-              <p>
-                Apart from all this, Deep Learning models such as CNN and GAN (introduced by Goodfellow) dominates all other methods and now the state-of-the-art models in computer science. With this, we are able to solve problems in computer vision such as classification, detection, prediction, and forecasting. More specifically these state-of-the-art methods give benchmark performance for segmentation, super-resolution, image-restoration, etc. Apart from computer vision, these models dominate even in Robotics, venture capitalism, high-performance computing, astronomy and many more.
-              </p>
-              <p>
-                There have been several limitations of using these deep learning techniques in the real world due to the hardware limitations, variation in the real world and experimental data, etc. A recent, comprehensive review is offered by researchers at Google that argues the capacity of deep learning models in real-world. As part of my work on image super-resolution and image to image translation, we are able to give state-of-the-art results in the real world scenarios; [4,5] presents a survey of approaches to this end. I believe as computational feasibility no longer remains a bottleneck that deep learning models present a promising approach to learn complex relationships over large datasets.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div style="font-size: 1.1rem; color: #444; margin-bottom: 2rem;">
+        <p>Omkar Thawakar is a <strong>PhD researcher at Mohamed bin Zayed University of Artificial Intelligence
+            (MBZUAI)</strong> specializing in <strong>video understanding, multimodal learning, and large multimodal
+            models (LMMs)</strong>. He is advised by <strong>Prof. Fahad Khan</strong> and <strong>Dr. Salman
+            Khan</strong>.</p>
 
-        <div class="post col-12">
-          <div class="thumb">
-            <img src="images/westworld.jpg">
-          </div>
-          <div class="post_info">
-            <div class="title">
-              <h3>
-                Personal Info
-              </h3>
-            </div>
-            <div class="desc">
-              <p>
-                <b>I (like to think that I) am an artist.</b>   
-              </p>
-              <p>
-                <b>I love cooking, biking, travelling and explor new things.</b>
-              </p>
-              <p>
-                <b>Apart from curriculam stuff, I spend time on</b>
-                <ul>
-                  <li>curating my pocket list.</li>
-                  <li>writing on medium.</li>
-                  <li>reading comics</li>
-                  <li>watching series</li>
-                  <li>enjoying sci-fi movies</li>
-                  <li>playing football and cricket</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+        <p>His research explores <strong>composed video retrieval, open-world video instance segmentation, multimodal
+            reasoning, and self-evolving agentic systems</strong>. He aims to design AI systems that <strong>reason,
+            adapt, and generalize beyond closed-world assumptions</strong>.</p>
 
-        <div class="post col-12">
-          <div class="thumb">
-            <img src="images/photoadda.jpg">
-          </div>
-          <div class="post_info">
-            <div class="title">
-              <h3>
-                My Websites.
-              </h3>
-            </div>
-            <div class="desc">
-              <p>
-                <a href="https://iitrpr.cvpr.in">CVPR Lab, IIT Ropar</a>   
-              </p>
-              <p>
-                <a href="omkarthawakar.github.io">Personal Blog</a>   
-              </p>
-              
-            </div>
-          </div>
-        </div>
-        
-        <div class="loader">
-          <br />
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        
+        <p>Beyond academia, he is the <strong>Founder and Tech Lead of Lawa.AI</strong>, an agentic AI startup building
+          <strong>privacy-preserving, multilingual AI assistants</strong> deployed in enterprise and various business
+          settings
+          across the UAE.
+        </p>
       </div>
-      
-      
-      <div class="right_sidebar col-md-3 col-sm-12">
-        
-        <div class="about_me widget">
-          <h3>About Me</h3>
-          <div class="my_photo">
-            <img src="images/omee.jpg">
-          </div>
-            <div class="text">
-              <p><b>Hi,</b>I am Omkar Thawakar and welcome to my blog.</p>
-            </div>
-          
+
+      <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem;">
+        <div style="flex: 1; min-width: 300px;">
+          <h2 class="section-title">Research Interests</h2>
+          <h3 style="color: var(--primary-color);">Primary</h3>
+          <ul style="list-style: circle; padding-left: 1.5rem;">
+            <li>Multimodal Learning & Reasoning</li>
+            <li>Video Understanding & Retrieval</li>
+            <li>Vision-Language Models (VLMs)</li>
+            <li>Large Multimodal Models (LMMs)</li>
+            <li>Agentic & Self-Evolving AI</li>
+            <li>Open-World Learning</li>
+          </ul>
+
+          <h3 style="color: var(--primary-color);">Secondary</h3>
+          <ul style="list-style: circle; padding-left: 1.5rem;">
+            <li>Efficient & Transparent LLMs</li>
+            <li>Multilingual & Cultural AI</li>
+            <li>Retrieval-Augmented Generation</li>
+            <li>World Models & Long-Horizon Reasoning</li>
+          </ul>
         </div>
 
-        <div class="about_me widget">
-          <h3>Best Research Paper Award</h3>
-          <div class="my_photo">
-            <img src="images/award.jpg">
-          </div>
-            <div class="text">
-              <p><b>Got Best Reasarch Paper award and Best Paper Award in International Conference on Computing: Communication, Networks and Security (IC3NS-2018)</b></p>
-            </div>
-            <a href="publications/Machine Learning Paper.pdf">See paper</a>  
+        <div style="flex: 1; min-width: 300px;">
+          <h2 class="section-title">Teaching & Service</h2>
+          <h3 style="font-size: 1.1rem; font-weight: 600;">Teaching Assistant — MBZUAI</h3>
+          <ul style="margin-bottom: 1.5rem;">
+            <li>Computer Vision</li>
+            <li>Multimodal Learning</li>
+          </ul>
+
+          <h3 style="font-size: 1.1rem; font-weight: 600;">Reviewer</h3>
+          <p>CVPR, ICCV, ECCV, IJCV, ACL</p>
+          <p><strong>50+</strong> papers reviewed</p>
         </div>
-
-        <div class="about_me widget">
-          <h3>Best thesis award for B.Tech project</h3>
-          <div class="my_photo">
-            <img src="images/btech_report.png">
-          </div>
-            <div class="text">
-              <p><b>Got Best thesis award for B.Tech project at SGGSIE&T Nanded.</b></p>
-              <p><b>
-                Selected one of the Best student from Computer Science Department at SGGSIE&T.
-              </b></p>
-            </div>
-             
-        </div>
-
-        <div class="about_me widget">
-          <h3>Maze Solver Robot</h3>
-          <div class="my_photo">
-            <img src="images/pragya.png">
-          </div>
-            <div class="text">
-              <p><b>Got First prize in Maze Solver Robot in three consecutive year (2016-2018) in Pragya (National Level Technical Fiesta).</b></p>
-            </div>
-             
-        </div>
-        
-        
-        <!--Goals-->
-        <div class="goals widget">
-          <div class="title">
-            <h4>My Goals</h4>
-          </div>
-          
-          <div class="goal_list">
-            <div class="goal">
-              <p>
-                <i class="fab fa-envira"></i>
-                Explore Deep Learning and Artificial Intelligence.
-              </p>
-            </div>
-            
-            <div class="goal">
-              <p>
-                <i class="fab fa-envira"></i>
-                Create Intelligent Systems.
-              </p>
-            </div>
-
-            <div class="goal">
-              <p>
-                <i class="fab fa-envira"></i>
-                Exploit AI for betterment of humans.
-              </p>
-            </div>
-            
-          </div>
-          
-        </div>
-        
-        <!--Social-->
-        <div class="my_social widget">
-          <div class="title">
-            <h4>Social</h4>
-          </div>
-          
-          <div class="row">
-            <div class="fb">
-              <a href="https://www.facebook.com/omkar.thawakar" target="_blank">
-              <img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-64.png">
-              </a>
-            </div>
-            
-            <div class="twitter">
-              <a href="https://twitter.com/ThawakarOmkar" target="_blank" >
-              <img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697029-twitter-64.png">
-              </a>
-            </div>
-
-            <div class="medium">
-              <a href="https://medium.com/@omee0805" target="_blank" >
-              <img src="images/medium.png" width="57px">
-              </a>
-            </div>
-
-            <div class="linkedin">
-              <a href="https://www.linkedin.com/in/omkar-thawakar-8b9521161/" target="_blank" >
-              <img src="images/linkedin.png" width="55px">
-              </a>
-            </div>
-
-            <div class="github">
-              <a href="https://github.com/OmkarThawakar" target="_blank" >
-              <img src="images/github.png" width="60px">
-              </a>
-            </div>
-
-            <div class="instagram">
-              <a href="https://www.instagram.com/omee0897/?hl=en" target="_blank" >
-              <img src="images/instagram.png" width="60px">
-              </a>
-            </div>
-
-            <div class="codepen">
-              <a href="https://codepen.io/omee/" target="_blank" >
-              <img src="images/codepen.png" width="55px">
-              </a>
-            </div>
-            
-            <div class="youtube">
-              <a href="https://www.youtube.com/channel/UC2bSA6pe3HZSZXvAAtdQDBg" target="_blank">
-              <img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697037-youtube-64.png">
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="categories widget">
-          <div class="categories">
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Deep Learning / Machine Learning</h3>
-              </div>
-              <div class="shape1"></div>
-              <div class="shape2"></div>
-              <div class="shape3"></div>
-            </div>
-
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Artificial Intelligence</h3>
-              </div>
-              <div class="rectangle1"></div>
-              <div class="rectangle2"></div>
-              <div class="rectangle3"></div>
-            </div>
-
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Computer Vision</h3>
-              </div>
-              <div class="shape1"></div>
-              <div class="shape2"></div>
-              <div class="shape3"></div>
-            </div>
-
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Reinforcement Learning</h3>
-              </div>
-              <div class="rectangle1"></div>
-              <div class="rectangle2"></div>
-              <div class="rectangle3"></div>
-            </div>
-
-
-          </div>
-        </div>
-        
       </div>
+
+      <!-- People Section -->
+      <section class="people-section">
+        <h2 class="section-title">Working With:</h2>
+
+        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">PhD Advisors</h3>
+        <div class="people-grid">
+          <div class="person-card">
+            <img src="images/people/FahadKhan.jpg" alt="Fahad Khan" class="person-img">
+            <div class="person-name">Prof. Fahad Khan</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/raoanwer.jpg" alt="Rao Anwer" class="person-img">
+            <div class="person-name">Dr. Rao Anwer</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/SalmanKhan.jpg" alt="Salman Khan" class="person-img">
+            <div class="person-name">Dr. Salman Khan</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">Collaborators & Mentors</h3>
+        <div class="people-grid">
+          <div class="person-card">
+            <img src="images/people/mubarak_shah.jpeg" alt="Mubarak Shah" class="person-img">
+            <div class="person-name">Prof. Mubarak Shah</div>
+            <div class="person-role">UCF</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/tim.jpg" alt="Timothy Baldwin" class="person-img">
+            <div class="person-name">Prof. Timothy Baldwin</div>
+            <div class="person-role">Provost, MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/eric_xing.jpg" alt="Eric Xing" class="person-img">
+            <div class="person-name">Prof. Eric Xing</div>
+            <div class="person-role">President, MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/ivan.jpg" alt="Ivan Laptev" class="person-img">
+            <div class="person-name">Prof. Ivan Laptev</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/ming.jpeg" alt="Ming-Hsuan Yang" class="person-img">
+            <div class="person-name">Prof. Ming-Hsuan Yang</div>
+            <div class="person-role">UC Merced; Google DeepMind</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/Michael Felsberg.jpeg" alt="Michael Felsberg" class="person-img">
+            <div class="person-name">Prof. Michael Felsberg</div>
+            <div class="person-role">Linköping Univ</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/jorma.jpg" alt="Jorma Laaksonen" class="person-img">
+            <div class="person-name">Dr. Jorma Laaksonen</div>
+            <div class="person-role">Aalto Univ</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/haris_khan.jpeg" alt="Haris Khan" class="person-img">
+            <div class="person-name">Dr. Haris Khan</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">Startup Mentors</h3>
+        <div class="people-grid">
+          <div class="person-card">
+            <img src="images/people/tim.jpg" alt="Timothy Baldwin" class="person-img">
+            <div class="person-name">Prof. Timothy Baldwin</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/FahadKhan.jpg" alt="Fahad Khan" class="person-img">
+            <div class="person-name">Prof. Fahad Khan</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/SalmanKhan.jpg" alt="Salman Khan" class="person-img">
+            <div class="person-name">Dr. Salman Khan</div>
+            <div class="person-role">MBZUAI</div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">Bachelor's Advisors</h3>
+        <div class="people-grid">
+          <div class="person-card">
+            <img src="images/people/smurala.jpg" alt="Subrahmanyam Murala" class="person-img">
+            <div class="person-name">Dr. Subrahmanyam Murala</div>
+            <div class="person-role">Trinity College Dublin</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/uday_kulkarni.jpeg" alt="Fahad Khan" class="person-img">
+            <div class="person-name">Prof. Uday Kulkarni</div>
+            <div class="person-role">SGGS</div>
+          </div>
+          <div class="person-card">
+            <img src="images/people/pnalwade.jpeg" alt="Salman Khan" class="person-img">
+            <div class="person-name">Mr. Prakash Nalwade</div>
+            <div class="person-role">SGGS</div>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Omkar Thawakar.</p>
     </div>
-    
-  </div>
+  </footer>
 
+  <script src="js/script.js"></script>
 </body>
-<footer>
-  <div class="text-center">
-    <span>Copyright : © Omkar Thawakar</span>
-  </div>
-  <div class="text-center">
-    <span>©Designed and Developed by <a href="https://omkarthawakar.github.io">Omkar Thawakar</a></span>
-  </div>
-</footer>
+
+</html>

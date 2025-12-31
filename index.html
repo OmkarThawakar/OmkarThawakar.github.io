@@ -1,562 +1,207 @@
-<!--
-Omkar Thawakar Portfolio.
--->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omkar Thawakar - PhD Researcher</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  
-  <link rel='stylesheet' href='css/style.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <script type="text/javascript" src="js/script.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"> 
-  </script>
-  <title>Omkar Thawakar</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="container">
-    
-    <div class="logo col-md-12">
-      <div class="logo_title">
-        <div><p>Omkar Thawakar</p> <p class="corner"></p></div>
-      </div>
-      <div class="language col-12">
-        <p>Researcher, Programmer, Coder, Developer, Artist ......</p>
-      </div>
-    </div>
-    <nav class="navbar stifky-top navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="index.html">Omkar Thawakar <p></p></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+  <canvas id="ai-background"></canvas>
+
+  <header class="container">
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">Omkar Thawakar</a>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="about.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">About me</a>
-          <a class="nav-item nav-link" href="publications.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Publications</a>
-          <a class="nav-item nav-link" href="experience.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Experience</a>
-          <a class="nav-item nav-link" href="projects.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Projects</a>
-          <a class="nav-item nav-link" href="articles.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Articles</a>
-          <a class="nav-item nav-link" href="images/Omkar_Thawakar.pdf" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Resume</a>
-          <a class="nav-item nav-link" href="contact.html" data-container="body" data-toggle="popover" data-placement="bottom" trigger="focus" data-content="">Contact</a>
-          
-          <div id="popover-content" class="hide">
-            <div class='category_list row'> 
-              <div class='category col-6'><span>Python</span></div>
-              <div class='category col-6'><span>Tensorflow</span></div>
-              <div class='category col-6'><span>PyTorch</span></div>
-              <div class='category col-6'><span>Django</span></div>
-              <div class='category col-6'><span>HTML</span></div>
-              <div class='category col-6'><span>CSS</span></div>
-              <div class='category col-6'><span>JAVASCRIPT</span></div>
-              <div class='category col-6'><span>RUBY</span></div>
-              <div class='category col-6'><span>C/C++</span></div>
-              <div class='category col-6'><span>Latex</span></div>
-              
-            </div>
-            
-          </div>
-          
-          
-        </div>
+      <div class="navbar-nav">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="images/Omkar_Thawakar.pdf" target="_blank">CV</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </div>
     </nav>
-    
-    <!--Posts area-->
-    <div class="row content">
-      
-      <div class="post_feed col-md-9 col-sm-12">
+  </header>
 
-        <table style="width:100%;border:0px;border-spacing:4px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <heading class="heading-1">Recent Activities ...</heading>
-          <br>
-            <tr>              
-              <td><strong>[Feb 2024]</strong></td>
-              <td> MobiLlama Released.<a href="https://github.com/mbzuai-oryx/MobiLlama"> more </a> </td>
-            </tr>
-            <tr>              
-              <td><strong>[Feb 2024]</strong></td>
-              <td> 1 Paper Accepted to CVPR-24<a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=flvl5YQAAAAJ"> more </a> </td>
-            </tr>
-            <tr>              
-              <td><strong>[August 2023]</strong></td>
-              <td> Joined PhD  at MBZUAI under Prof Fahad Khan.<a href="https://sites.google.com/view/fahadkhans/home"> more </a> </td>
-            </tr>
-            <tr>              
-              <td><strong>[July 2023]</strong></td>
-              <td> 1 Paper Accepted to MICCAI-23<a href="https://arxiv.org/abs/2303.12073"> more </a> </td>
-            </tr>
-            <tr>              
-              <td><strong>[June 2023]</strong></td>
-              <td> 1 Paper Accepted to CAIP-23<a href="https://link.springer.com/chapter/10.1007/978-3-031-44237-7_25"> more </a> </td>
-            </tr>
-            <tr>              
-                <td><strong>[Dec 2022]</strong></td>
-                <td> Volunteer NeurIPS-2022 Workshop on Vision Transformers. <a href="https://sites.google.com/view/vtta-neurips2022/home?authuser=0"> more </a> </td>
-            </tr>
-            <tr>              
-              <td><strong>[Dec 2022]</strong></td>
-              <td> Volunteer ACCV-2022 Workshop on Vision Transformers. <a href="https://sites.google.com/view/vtta-neurips2022/home?authuser=0"> more </a> </td>
-            </tr>
-            <tr>              
-              <td><strong>[Nov 2022]</strong></td>
-              <td> Reviewer for CVPR-2023, WACV-2022.</td>
-              </tr>
-            <tr> 
-            <tr>              
-              <td><strong>[Oct 2022]</strong></td>
-              <td>Presented MSSTS at ECCV-2022, Tel-Aviv <a href="https://eccv2022.ecva.net/"> visit </a></td>
-            </tr>
-            <tr>              
-              <td><strong>[Jul 2022]</strong></td>
-              <td>MSSTS accepted at ECCV 2022. </td>
-            </tr>
-            <tr>              
-              <td><strong>[Sept 2021]</strong></td>
-              <td>Joined MBZUAI CV Lab under Dr Fahad Khan. <a href="https://www.ival-mbzuai.com/"> more </a>.</td>
-            </tr>
-            
-        </tbody></table>
-
-        <hr> 
-
-
-        <h2 class="text-center content" >
-          Recent Projects ... 
-        </h2>
-
-        <div class="post col-12">
-          <div class="thumb">
-            <iframe allowfullscreen width="100%" height="370px" src="https://www.youtube.com/embed/oossBH3WLHY" title="MobiLLaMA : Towards Accurate and Lightweight Fully Transparent GPT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>  
-          <div class="post_info">
-            <div class="date">Feb,2024</div>  
-            <div class="title">
-              <h3>
-                MobiLlama: Towards Accurate and Lightweight Fully Transparent GPT
-              </h3>
-            </div>  
-            <div class="desc">
-              <p>
-                <a href="https://github.com/mbzuai-oryx/MobiLlama" target="_blank" >
-                  <img src="images/github.png" width="40px">
-                </a>
-                <a href="https://huggingface.co/collections/MBZUAI/mobillama-65dd4182d588c91e8230332e" target="_blank" >
-                  <img src="images/hf-logo.svg" width="50px">
-                </a>
-                <a href="https://www.youtube.com/watch?v=oossBH3WLHY&ab_channel=OmkarThawakar" target="_blank" >
-                  <img src="images/youtube.jpg" width="50px">
-                </a>
-                <a href="https://twitter.com/_akhaliq/status/1762353396688806172" target="_blank" >
-                  <img src="images/twitter.png" width="40px">
-                </a>
-                <a href="https://xthemadgenius.medium.com/on-device-ai-mobillamas-leap-in-lightweight-ai-innovation-95b9712c552c" target="_blank" >
-                  <img src="images/medium.png" width="60px">
-                </a>
-                <a href="https://www.linkedin.com/posts/omkar-thawakar-8b9521161_llm-slm-languagemodel-activity-7168534694433603585-3CEB?utm_source=share&utm_medium=member_ios" target="_blank" >
-                  <img src="images/linkedin.png" width="45px">
-                </a>
-              </p>
-              <p>
-                <a href="https://www.ival-mbzuai.com/"> Advisors: Prof Fahad Khan, Dr Salman Khan</a>
-              </p>
-              <p>
-                "Bigger the better" has been the predominant trend in recent Large Language Models (LLMs) development. 
-                However, LLMs do not suit well for scenarios that require on-device processing, energy efficiency, 
-                low memory footprint, and response efficiency. These requisites are crucial for privacy, security, 
-                and sustainable deployment. This paper explores the "less is more" paradigm by addressing the challenge 
-                of designing accurate yet efficient Small Language Models (SLMs) for resource constrained devices. 
-                Our primary contribution is the introduction of an accurate and fully transparent open-source 0.5 billion (0.5B) 
-                parameter SLM, named MobiLlama, catering to the specific needs of resource-constrained computing with an 
-                emphasis on enhanced performance with reduced resource demands. MobiLlama is a SLM design that initiates 
-                from a larger model and applies a careful parameter sharing scheme to reduce both the pre-training and 
-                the deployment cost. Our work strives to not only bridge the gap in open-source SLMs but also ensures 
-                full transparency, where complete training data pipeline, training code, model weights, and over 300 
-                checkpoints along with evaluation codes is available at : https://github.com/mbzuai-oryx/MobiLlama.
-              </p>
-            </div>  
-            <div class="meta row">
-              <div class="read_more col-6">
-                <span><a href="https://github.com/mbzuai-oryx/MobiLlama"> Read More </a> <i class="fas fa-arrow-circle-right"></i></span>
-              </div>
-            </div>    
-          </div>
+  <main class="container">
+    <section class="hero animate-fade-in"
+      style="display: flex; align-items: center; justify-content: center; gap: 4rem; text-align: left;">
+      <div class="hero-content">
+        <h1>Omkar Thawakar</h1>
+        <div class="hero-subtitle">
+          PhD Researcher | Multimodal AI | Video Understanding | LLMs & Agents
         </div>
+        <p class="hero-text"
+          style="color: #555; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; display: inline-block; max-width: 600px;">
+          PhD researcher at <strong>MBZUAI</strong>, working on <strong>multimodal reasoning, video understanding, large
+            multimodal models (LMMs), and self-evolving AI systems</strong>, with strong focus on <strong>real-world
+            deployment</strong>.
+        </p>
 
-        <hr>
-
-        <h2 class="text-center" >
-          Industry Projects ... 
-        </h2>
-
-        <div class="post col-12">
-          <div class="thumb">
-            <iframe onload="iframeLoaded()" src="https://www.youtube.com/embed/dnUgzh3ULrM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="370px"></iframe>
-          </div>  
-          <div class="post_info">
-            <div class="date">JULY,2019</div>  
-            <div class="title">
-              <h3>
-                Real Time Piston Ring Segmentation.
-              </h3>
-            </div>  
-            <div class="desc">
-              <p>
-                This project is designed and developed in CVPR Lab, IIT Ropar, India.
-              </p>
-              <p>
-                <a href="https://iitrpr.cvpr.in/members/">Guide : Dr. Subrahmanyam Murala</a>
-              </p>
-              <p>
-                Sponsored By : Yamaha Labs, India. 
-              </p>
-              <p>
-                In automatomibe industry, engine assembly is considered as one of the crucial part. During engine assenbly various parts assembled together to complate desired two stroke engine. Piston is a part which responsible for the production of stroke which prodce mechanical energy for acceleration. Piston contains various rings depending on different types of engines. During engine assembly, piston without rings can leads to the faulty engine. Due to this it is mandetory to take care of piston rings during engine assembly.
-
-                Our project aims the real time detection of the rings in piston. Our objective is to develope a small device which real time detect piston rings. We consider the fact that the cost of our device should be less than 20,000 INR.  
-              </p>
-            </div>  
-            <div class="meta row">
-              <div class="read_more col-6">
-                <span><a href="https://github.com/OmkarThawakar/Self-Learning-Robot"> Read More </a> <i class="fas fa-arrow-circle-right"></i></span>
-              </div>
-            </div>    
-          </div>
+        <div class="social-links" style="justify-content: flex-start; margin-top: 1rem;">
+          <a href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en" target="_blank"
+            title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://github.com/OmkarThawakar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/omkar-thawakar-8b9521161/" target="_blank" title="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="mailto:thawakar.omkar@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-        
-        <div class="post col-12">
-          <div class="thumb">
-            <iframe onload="iframeLoaded()" src="https://www.youtube.com/embed/rPhG_JPEv94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="370px"></iframe>
-          </div>
-          <div class="post_info">
-            <div class="date">AUGUST,2018</div>  
-            <div class="title">
-              <h3>
-                Real Time Reinforcement Training of Robot.
-              </h3>
-            </div> 
-            <div class="desc">
-              <p>
-                Reinforcement Learning (RL) is a subfield of Machine Learning where an agent learns by interacting with its environment, observing the results of these interactions and receiving a reward (positive or negative) accordingly. This way of learning mimics the fundamental way in which we humans (and animals alike) learn. Currently, Machines are not as intelligent as humans in terms of knowledge extraction and new discoveries with using previous learned knowledge. Reinforcement Training is the solution for training of Robots in real world like we humans does right from our childhood. In this project I used Reinforcement approach (Q Learning) to train the Robot so that it should follow line precisely without being explicitely programmed for it.   
-              </p>
-            </div> 
-            <div class="meta row">
-              <div class="read_more col-6">
-                <span><a href="https://github.com/OmkarThawakar/Self-Learning-Robot"> Read More </a> <i class="fas fa-arrow-circle-right"></i></span>
-              </div>
-            </div>    
-          </div>
-        </div>
-
-        
-
-
-        <h3 class="text-center">
-          Recent Posts ... 
-        </h3>
-        
-        <div class="post col-12">
-          
-          <div class="thumb">
-            <img src="images/dgx.jpg">
-          </div>
-          
-          <div class="post_info">
-            <div class="date">AUGUST 15,2019</div>
-            
-            <div class="title">
-              <h3>
-                How to access NVIDIA DGX Station/Linux Workstation remotely from MAC
-              </h3>
-            </div>
-            
-            <div class="desc">
-              <p>
-                NVIDIA® DGX Station™ is the world’s fastest workstation for leading-edge AI development. This fully integrated and optimized system enables your team to get started faster and effortlessly experiment with the power of a data center in your office. For more info visit AI Workstation for Data Science Teams .Following article is about accessing NVIDIA DGX Station remotely from MAC with simple ssh and X11.   
-              </p>
-            </div>
-            
-            <div class="meta row">
-              <div class="read_more col-6">
-                <span><a href="https://medium.com/@omee0805/how-to-access-nvidia-dgx-station-linux-workstation-remotely-from-mac-e0e58ab4d7ff"> Read More </a> <i class="fas fa-arrow-circle-right"></i></span>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-
-        </div>
-
-        <div class="post col-12">
-          
-          <div class="thumb">
-            <img src="images/backprop.png">
-          </div>
-          
-          <div class="post_info">
-            <div class="date">AUGUST 15,2019</div>
-            
-            <div class="title">
-              <h3>
-                Errorbackpropagation : Learning Factors
-              </h3>
-            </div>
-            
-            <div class="desc">
-              <p>
-                The backpropagation algorithm was originally introduced in the 1970s, but its importance wasn’t fully appreciated until a famous paper in 1986 by David Rumelhart, Geoffrey Hinton, and Ronald Williams. The paper describes several neural networks where backpropagation works far faster than earlier approaches to learning, making it possible to use neural nets to solve problems which had previously been insoluble. Today, the backpropagation algorithm is the workhorse of learning in neural networks. Although Backpropagation is the widely used and most successful algorithm for the training of a neural network of all time, there are several factors which affect the Error-Backpropagation training algorithms.   
-              </p>
-            </div>
-            
-            <div class="meta row">
-              <div class="read_more col-6">
-                <span><a href="https://medium.com/@omee0805/backpropagation-learning-factors-aca9c6e3bc1">Read More</a><i class="fas fa-arrow-circle-right"></i></span>
-              </div>
-              
-              
-            </div>
-            
-          </div>
-
-        </div>
-        
-        
-        <div class="loader">
-          <br />
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        
       </div>
-      
-      
-      <div class="right_sidebar col-md-3 col-sm-12">
-        
-        <div class="about_me widget">
-          <h3>About Me</h3>
-          <div class="my_photo">
-            <img src="images/omee.jpg">
-          </div>
-            <div class="text">
-              <p><b>Hi,</b>I am Omkar Thawakar and welcome to my portfolio.</p>
-            </div>
-          
-        </div>
 
-        <hr>
-
-        <div class="categories">
-          <h3>Area of Expertise</h3>
-          <div class="my_photo">
-            <button type="button" class="btn btn-outline-success btn-rounded mb-1" >Large Language Models</button>
-            <button type="button" class="btn btn-outline-warning btn-rounded mb-1" >VisionLanguage Models</button>
-            <button type="button" class="btn btn-outline-danger btn-rounded mb-1" >Multimodal Learning</button>
-            <button type="button" class="btn btn-outline-primary btn-rounded mb-1" >Video Understanding</button>
-            <button type="button" class="btn btn-outline-info btn-rounded mb-1" >Composed Video Retrieval</button>
-            <button type="button" class="btn btn-outline-secondary btn-rounded mb-1" >Video Object Segmentation</button>
-          </div>  
-        </div>
-
-        <hr>
-
-        <h3>Highlights</h3>
-
-        <hr>
-
-        <div class="about_me widget">
-          <h5>Best Research Paper Award</h5>
-          <div class="my_photo">
-            <img src="images/award.jpg">
-          </div>
-            <div class="text">
-              <p><b>Got Best Reasarch Paper award and Best Paper Award in International Conference on Computing: Communication, Networks and Security (IC3NS-2018)</b></p>
-            </div>
-            <a href="publications/Machine Learning Paper.pdf">See paper</a>  
-        </div>
-
-        <div class="about_me widget">
-          <h5>Best thesis award for B.Tech project</h5>
-          <div class="my_photo">
-            <img src="images/btech_report.png">
-          </div>
-            <div class="text">
-              <p><b>Got Best thesis award for B.Tech project at SGGSIE&T Nanded.</b></p>
-              <p><b>
-                Selected one of the Best student from Computer Science Department at SGGSIE&T.
-              </b></p>
-            </div>
-             
-        </div>
-
-        <div class="about_me widget">
-          <h5>Maze Solver Robot</h5>
-          <div class="my_photo">
-            <img src="images/pragya.png">
-          </div>
-            <div class="text">
-              <p><b>Got First prize in Maze Solver Robot in three consecutive year (2016-2018) in Pragya (National Level Technical Fiesta).</b></p>
-            </div>
-             
-        </div>
-        
-        
-        <!-- Goals
-        <div class="goals widget">
-          <div class="title">
-            <h4>My Goals</h4>
-          </div>
-          
-          <div class="goal_list">
-            <div class="goal">
-              <p>
-                <i class="fab fa-envira"></i>
-                Explore Deep Learning and Artificial Intelligence.
-              </p>
-            </div>
-            
-            <div class="goal">
-              <p>
-                <i class="fab fa-envira"></i>
-                Create Intelligent Systems.
-              </p>
-            </div>
-
-            <div class="goal">
-              <p>
-                <i class="fab fa-envira"></i>
-                Exploit AI for betterment of humans.
-              </p>
-            </div>
-            
-          </div>
-          
-        </div> -->
-        
-        <!--Social-->
-        <div class="my_social widget">
-          <div class="title">
-            <h4>Social</h4>
-          </div>
-          
-          <div class="row">
-            <div class="fb">
-              <a href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en" target="_blank">
-              <img src="images/google_scholar.png" width='60px'>
-              </a>
-            </div>
-
-            <div class="fb">
-              <a href="https://www.facebook.com/omkar.thawakar" target="_blank">
-              <img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-64.png">
-              </a>
-            </div>
-            
-            <div class="twitter">
-              <a href="https://twitter.com/ThawakarOmkar" target="_blank" >
-              <img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697029-twitter-64.png">
-              </a>
-            </div>
-
-            <div class="medium">
-              <a href="https://medium.com/@omee0805" target="_blank" >
-              <img src="images/medium.png" width="75px">
-              </a>
-            </div>
-
-            <div class="linkedin">
-              <a href="https://www.linkedin.com/in/omkar-thawakar-8b9521161/" target="_blank" >
-              <img src="images/linkedin.png" width="55px">
-              </a>
-            </div>
-
-            <div class="github">
-              <a href="https://github.com/OmkarThawakar" target="_blank" >
-              <img src="images/github.png" width="60px">
-              </a>
-            </div>
-
-            <div class="instagram">
-              <a href="https://www.instagram.com/omee0897/?hl=en" target="_blank" >
-              <img src="images/instagram.png" width="60px">
-              </a>
-            </div>
-
-            <div class="codepen">
-              <a href="https://codepen.io/omee/" target="_blank" >
-              <img src="images/codepen.png" width="55px">
-              </a>
-            </div>
-            
-            <div class="youtube">
-              <a href="https://www.youtube.com/channel/UC2bSA6pe3HZSZXvAAtdQDBg" target="_blank">
-              <img src="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697037-youtube-64.png">
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="categories widget">
-          <div class="categories">
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Deep Learning / Machine Learning</h3>
-              </div>
-              <div class="shape1"></div>
-              <div class="shape2"></div>
-              <div class="shape3"></div>
-            </div>
-
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Artificial Intelligence</h3>
-              </div>
-              <div class="rectangle1"></div>
-              <div class="rectangle2"></div>
-              <div class="rectangle3"></div>
-            </div>
-
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Computer Vision</h3>
-              </div>
-              <div class="shape1"></div>
-              <div class="shape2"></div>
-              <div class="shape3"></div>
-            </div>
-
-            <div class="category col-12">
-              <div class="title col-10">
-                <h3>Reinforcement Learning</h3>
-              </div>
-              <div class="rectangle1"></div>
-              <div class="rectangle2"></div>
-              <div class="rectangle3"></div>
-            </div>
-
-
-          </div>
-        </div>
-        
+      <div class="hero-image">
+        <img src="images/omkar.jpg" alt="Omkar Thawakar"
+          style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 5px solid white;">
       </div>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3rem 0;">
+
+    <div class="row" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+      <!-- Highlights / News -->
+      <section class="col animate-fade-in" style="flex: 2; min-width: 300px;">
+        <h2 class="section-title">Highlights</h2>
+        <ul class="news-list">
+          <li><strong>[ICLR-SLLM 2025]</strong> Spotlight (Top-2%) for <strong>MobiLLaMA</strong>.</li>
+          <li><strong>[CVPR 2025]</strong> Highlight for <strong>All Languages Matter</strong> (LMM Evaluation).</li>
+          <li><strong>[Impact]</strong> <strong>300K+</strong> HuggingFace downloads across models.</li>
+          <li><strong>[Award]</strong> <strong>Khalifa Fund Entrepreneurship Competition Winner</strong> (250K AED).
+          </li>
+          <li><strong>[Award]</strong> <strong>Sandook Al Watan Entrepreneurship Competitio Winner</strong>.</li>
+          <li><strong>[Startup]</strong> Founder & Tech Lead @ <strong>Lawa.AI</strong>.</li>
+        </ul>
+      </section>
+
+      <!-- Featured Research (Selected from C.4, C.5, C.6, C.10) -->
+      <section class="col animate-fade-in" style="flex: 1.5; min-width: 300px;">
+        <h2 class="section-title">Spotlight Research</h2>
+        <div class="card" style="margin-bottom: 1rem;">
+          <div class="card-body" style="padding: 1rem;">
+            <h4 style="margin: 0; font-size: 1.1rem;">MobiLLaMA (ICLR 2025)</h4>
+            <p class="text-muted" style="margin: 0.5rem 0; font-size: 0.9rem;">Accurate & Lightweight Fully Transparent
+              GPT. 200K+ Downloads.</p>
+            <a href="#" style="font-size: 0.85rem;">Read Paper <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="padding: 1rem;">
+            <h4 style="margin: 0; font-size: 1.1rem;">LlamaV-o1 (ACL 2025)</h4>
+            <p class="text-muted" style="margin: 0.5rem 0; font-size: 0.9rem;">Rethinking Step-by-Step Visual Reasoning
+              in LLMs.</p>
+            <a href="#" style="font-size: 0.85rem;">Read Paper <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
     </div>
-    
-  </div>
 
+    <!-- Startup Section -->
+    <section class="startups animate-fade-in" style="margin-top: 4rem;">
+      <h2 class="section-title">Startups & Industry</h2>
+      <div class="card-grid">
+        <!-- LawaAI -->
+        <article class="card startup-card"
+          style="background: rgba(255,255,255,0.8); border: 2px solid rgba(0,86,179,0.3);">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-gavel" style="color: var(--primary-color);"></i> Lawa.AI</h3>
+            <div style="margin-bottom: 0.5rem; font-weight: 600; color: var(--primary-color);">Founder & Tech-Lead</div>
+            <p class="card-text">
+              <strong>Agentic AI platform for enterprises and businesses.</strong>
+              <br><br>
+            <ul style="padding-left: 1.2rem; font-size: 0.9rem; margin-top: 0.5rem;">
+              <li>Multilingual, privacy-first AI agents.</li>
+              <li>Deployed in real organizational workflows.</li>
+              <li><strong>$150K+</strong> projected annual revenue (2026).</li>
+              <li><strong>$70K</strong> pre-seed + multiple grants.</li>
+            </ul>
+            </p>
+          </div>
+        </article>
+
+        <!-- Nutrigenics -->
+        <article class="card startup-card"
+          style="background: rgba(255,255,255,0.8); border: 2px solid rgba(40,167,69,0.3);">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-leaf" style="color: #28a745;"></i> Nutrigenics.Care</h3>
+            <div style="margin-bottom: 0.5rem; font-weight: 600; color: #28a745;">Founder & CTO</div>
+            <p class="card-text">
+              <strong>AI-powered personalized nutrition platform.</strong>
+              <br><br>
+            <ul style="padding-left: 1.2rem; font-size: 0.9rem; margin-top: 0.5rem;">
+              <li>Nutrition-GPT engine.</li>
+              <li>Clinical collaboration.</li>
+              <li><strong>$100K+</strong> grant funding.</li>
+              <li>Microsoft Founders Hub Grant(<strong>$150K</strong> Technical Support).</li>
+            </ul>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Recent Publications / Preprints -->
+    <section class="animate-fade-in" style="margin-top: 4rem;">
+      <h2 class="section-title">Recent Preprints & Submitted Work</h2>
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+
+        <div style="margin-bottom: 1rem;">
+          <div style="font-weight: 600; font-size: 1.05rem;">EvoLMM: Self-Evolving Large Multimodal Models with
+            Continuous Rewards</div>
+          <div style="font-size: 0.95rem; color: #666;">Omkar Thawakar et al.</div>
+          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Submitted / Preprint</div>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+
+        <div style="margin-bottom: 1rem;">
+          <div style="font-weight: 600; font-size: 1.05rem;">CoVR-R: Reason-Aware Composed Video Retrieval</div>
+          <div style="font-size: 0.95rem; color: #666;">Omkar Thawakar et al.</div>
+          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Submitted / Preprint</div>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+
+        <div style="margin-bottom: 1rem;">
+          <div style="font-weight: 600; font-size: 1.05rem;">Mobile-O: Unified Multimodal Understanding & Generation on
+            Mobile</div>
+          <div style="font-size: 0.95rem; color: #666;">A. Shaker, Omkar Thawakar et al.</div>
+          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Submitted / Preprint</div>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+
+        <div>
+          <div style="font-weight: 600; font-size: 1.05rem;">LLM Post-Training: A Deep Dive into Reasoning Large
+            Language Models</div>
+          <div style="font-size: 0.95rem; color: #666;">Komal Kumar, Omkar Thawakar et al.</div>
+          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Submitted / Preprint</div>
+        </div>
+
+      </div>
+    </section>
+
+    <div style="text-align: center; margin-top: 4rem;">
+      <a href="publications.html" class="btn">View All Publications <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Omkar Thawakar</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-<footer>
-  <div class="text-center">
-    <span>Copyright : © Omkar Thawakar</span>
-  </div>
-  <div class="text-center">
-    <span>©Designed and Developed by <a href="https://omkarthawakar.github.io">Omkar Thawakar</a></span>
-  </div>
-</footer>
 
 </html>

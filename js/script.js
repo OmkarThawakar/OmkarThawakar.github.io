@@ -40,6 +40,14 @@ function initParticles() {
   const connectionDistance = 150;
   const particleSpeed = 0.5;
 
+  // Color Palette (Darker for better visibility)
+  const colors = [
+    'rgba(110, 30, 180, 0.8)', // Darker Violet
+    'rgba(34, 153, 84, 0.8)',  // Darker Green
+    'rgba(192, 57, 43, 0.8)',  // Darker Red
+    'rgba(0, 86, 179, 0.8)'    // Darker Blue
+  ];
+
   function resize() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
@@ -52,6 +60,7 @@ function initParticles() {
       this.vx = (Math.random() - 0.5) * particleSpeed;
       this.vy = (Math.random() - 0.5) * particleSpeed;
       this.size = Math.random() * 2 + 1;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
     }
 
     update() {
@@ -63,7 +72,7 @@ function initParticles() {
     }
 
     draw() {
-      ctx.fillStyle = 'rgba(0, 86, 179, 0.5)'; // Primary color
+      ctx.fillStyle = this.color;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
@@ -81,7 +90,7 @@ function initParticles() {
     ctx.clearRect(0, 0, width, height);
 
     // Draw connections
-    ctx.strokeStyle = 'rgba(0, 86, 179, 0.1)';
+    ctx.strokeStyle = 'rgba(150, 150, 150, 0.2)'; // Neutral gray for connections
     ctx.lineWidth = 1;
 
     for (let i = 0; i < particles.length; i++) {

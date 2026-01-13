@@ -217,13 +217,17 @@ h3 {
   background: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; Removed to allow learn-more popup */
   transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  /* Ensure z-index works */
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+  z-index: 20;
+  /* Bring to front on hover */
 }
 
 .card-body {
@@ -245,6 +249,9 @@ h3 {
   background: var(--bg-alt);
   border-top: 1px solid var(--border-color);
   font-size: 0.875rem;
+  /* Manually round bottom corners since overflow is not hidden */
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 /* Startup Cards - Extra Fancy */
@@ -255,6 +262,63 @@ h3 {
 .startup-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Learn More Hover Effect */
+.learn-more-container {
+  display: inline-block;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.project-details {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 350px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.learn-more-container:hover .project-details {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.project-details h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25rem;
+}
+
+.project-details h4:first-child {
+  margin-top: 0;
+}
+
+.project-details ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.project-details p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Timeline (for Experience/Education) */

@@ -58,6 +58,61 @@
       margin-top: 0.25rem;
       font-weight: 600;
     }
+
+    .pub-links {
+      display: inline-flex;
+      gap: 0.5rem;
+      margin-left: 0.75rem;
+      font-style: normal;
+      vertical-align: middle;
+    }
+
+    .pub-link-btn {
+      font-size: 0.75rem;
+      color: #4b5563;
+      text-decoration: none;
+      border: 1px solid #d1d5db;
+      background-color: #f9fafb;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+      font-weight: 500;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .pub-link-btn:hover {
+      background-color: #e5e7eb;
+      color: #111827;
+      text-decoration: none;
+      border-color: #9ca3af;
+    }
+
+    .pub-link-arxiv {
+      color: #b31b1b;
+      border-color: #e5c3c3;
+      background-color: #fcf4f4;
+    }
+
+    .pub-link-arxiv:hover {
+      background-color: #b31b1b;
+      color: #ffffff;
+      border-color: #b31b1b;
+    }
+
+    .pub-link-github {
+      color: #24292f;
+      border-color: #d0d7de;
+      background-color: #f6f8fa;
+    }
+
+    .pub-link-github:hover {
+      background-color: #24292f;
+      color: #ffffff;
+      border-color: #24292f;
+    }
   </style>
 </head>
 
@@ -78,7 +133,7 @@
         <a class="nav-link active" href="publications.html">Publications</a>
         <a class="nav-link" href="projects.html">Projects</a>
         <a class="nav-link" href="gallery.html">Gallery</a>
-        <a class="nav-link" href="images/Omkar_Thawakar.pdf" target="_blank">CV</a>
+        <a class="nav-link" href="Omkar_Thawakar_CV.pdf" target="_blank">CV</a>
         <a class="nav-link" href="contact.html">Contact</a>
       </div>
     </nav>
@@ -92,21 +147,54 @@
       <h2 class="pub-category">Conferences & Journals</h2>
 
       <div class="pub-item">
+        <div class="pub-title">EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards</div>
+        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-venue">CVPR 2026 (findings) <span class="pub-links"><a href="https://arxiv.org/pdf/2511.16672"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/EvoLMM" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
+        <div class="pub-notes">
+          <span
+            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fas fa-quote-right"></i> 7+ Citations</span>
+          <span
+            style="display:inline-block; background:#fff3e0; color:#e65100; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fas fa-cube"></i> 1.2k+ Model Downloads</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">CoVR-R: Reason-Aware Composed Video Retrieval</div>
+        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-venue">CVPR 2026 (findings) <span class="pub-links"><a href="#"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/CoVR-R" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
+      </div>
+
+      <div class="pub-item">
         <div class="pub-title">DuwatBench: Bridging Language and Visual Heritage through an Arabic Calligraphy Benchmark
           for Multimodal Understanding</div>
         <div class="pub-authors">Shubham Patle, Sara Ghaboura, ... Omkar Thawakar, et al.</div>
-        <div class="pub-venue">EACL 2026 (Main)</div>
+        <div class="pub-venue">EACL 2026 (Main) <span class="pub-links"><a href="https://arxiv.org/pdf/2601.19898"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/DuwatBench" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-download"></i> 202 Dataset Downloads</span>
+              class="fas fa-download"></i> 500+ Dataset Downloads</span>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">Beyond Simple Edits: Composed Video Retrieval with Dense Modifications</div>
         <div class="pub-authors">Omkar Thawakar, Dmitry Demidev, Ritesh Thawkar, et al.</div>
-        <div class="pub-venue">ICCV 2025</div>
+        <div class="pub-venue">ICCV 2025 <span class="pub-links"><a
+              href="https://openaccess.thecvf.com/content/ICCV2025/papers/Thawakar_Beyond_Simple_Edits_Composed_Video_Retrieval_with_Dense_Modifications_ICCV_2025_paper.pdf"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/OmkarThawakar/BSE-CoVR" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -123,41 +211,52 @@
       <div class="pub-item">
         <div class="pub-title">LlamaV-o1: Rethinking Step-by-Step Visual Reasoning in LLMs</div>
         <div class="pub-authors">Omkar Thawakar, D Dissanayake, KP More, R Thawkar, A Heakl, N Ahsan, ...</div>
-        <div class="pub-venue">ACL 2025</div>
+        <div class="pub-venue">ACL 2025 <span class="pub-links"><a
+              href="https://aclanthology.org/2025.findings-acl.1247.pdf" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/LlamaV-o1" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
               class="fab fa-github"></i> 300+ GitHub Stars</span>
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-quote-right"></i> 110+ Citations</span>
+              class="fas fa-quote-right"></i> 130+ Citations</span>
           <span
             style="display:inline-block; background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-download"></i> 6.1K+ Dataset Downloads</span>
+              class="fas fa-download"></i> 7.3K+ Dataset Downloads</span>
           <span
             style="display:inline-block; background:#fff3e0; color:#e65100; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-cube"></i> 25K+ Model Downloads</span>
+              class="fas fa-cube"></i> 31K+ Model Downloads</span>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">TimeTravel: A Benchmark for Historical & Cultural Artifact Understanding</div>
         <div class="pub-authors">S Ghaboura, KP More, R Thawkar, W Al Ghallabi, O Thawakar, FS Khan, ...</div>
-        <div class="pub-venue">ACL 2025</div>
+        <div class="pub-venue">ACL 2025 <span class="pub-links"><a
+              href="https://aclanthology.org/2025.findings-acl.1211.pdf" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/TimeTravel" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
               class="fas fa-quote-right"></i> 10+ Citations</span>
           <span
             style="display:inline-block; background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-download"></i> 2.5K+ Dataset Downloads</span>
+              class="fas fa-download"></i> 3.1K+ Dataset Downloads</span>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">MobiLLaMA: Towards Accurate & Lightweight Fully Transparent GPT</div>
         <div class="pub-authors">Omkar Thawakar, A Vayani, S Khan, H Cholakal, RM Anwer, M Felsberg, ...</div>
-        <div class="pub-venue">ICLR 2025 (Spotlight, Top-2%)</div>
+        <div class="pub-venue">ICLR 2025 (Spotlight, Top-2%) <span class="pub-links"><a
+              href="https://arxiv.org/abs/2402.16840" class="pub-link-btn pub-link-arxiv" target="_blank"><i
+                class="fas fa-file-pdf"></i> arXiv</a> <a href="https://github.com/mbzuai-oryx/MobiLlama"
+              class="pub-link-btn pub-link-github" target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -167,14 +266,18 @@
               class="fas fa-quote-right"></i> 50+ Citations</span>
           <span
             style="display:inline-block; background:#fff3e0; color:#e65100; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-cube"></i> 250K+ Model Downloads</span>
+              class="fas fa-cube"></i> 320K+ Model Downloads</span>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">All Languages Matter: Evaluating LMMs on 100 Culturally Diverse Languages</div>
         <div class="pub-authors">A Vayani, D Dissanayake, H Watawana, N Ahsan, N Sasikumar, ...</div>
-        <div class="pub-venue">CVPR 2025 (Highlight)</div>
+        <div class="pub-venue">CVPR 2025 (Highlight) <span class="pub-links"><a
+              href="https://openaccess.thecvf.com/content/CVPR2025/papers/Vayani_All_Languages_Matter_Evaluating_LMMs_on_Culturally_Diverse_100_Languages_CVPR_2025_paper.pdf"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/ALM-Bench" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -188,36 +291,51 @@
       <div class="pub-item">
         <div class="pub-title">Composed Video Retrieval via Enriched Context and Discriminative Embeddings</div>
         <div class="pub-authors">Omkar Thawakar, M Naseer, RM Anwer, S Khan, M Felsberg, M Shah, ...</div>
-        <div class="pub-venue">CVPR 2024</div>
+        <div class="pub-venue">CVPR 2024 <span class="pub-links"><a
+              href="https://openaccess.thecvf.com/content/CVPR2024/papers/Thawakar_Composed_Video_Retrieval_via_Enriched_Context_and_Discriminative_Embeddings_CVPR_2024_paper.pdf"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/OmkarThawakar/composed-video-retrieval" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-quote-right"></i> 20+ Citations</span>
+              class="fas fa-quote-right"></i> 25+ Citations</span>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">CAMEL-Bench: A Comprehensive Arabic LMM Benchmark</div>
         <div class="pub-authors">S Ghaboura, A Heakl, O Thawakar, AHSA Alharthi, I Riahi, A Radman, ...</div>
-        <div class="pub-venue">NAACL 2025</div>
+        <div class="pub-venue">NAACL 2025 <span class="pub-links"><a
+              href="https://aclanthology.org/2025.findings-naacl.105.pdf" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/Camel-Bench" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-quote-right"></i> 10+ Citations</span>
+              class="fas fa-quote-right"></i> 15+ Citations</span>
           <span
             style="display:inline-block; background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-download"></i> 6.5K+ Dataset Downloads</span>
+              class="fas fa-download"></i> 7.7K+ Dataset Downloads</span>
         </div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">Fann or Flop: A Benchmark for Arabic Poetry Understanding</div>
         <div class="pub-authors">W Al Ghallabi, R Thawkar, S Ghaboura, KP More, O Thawakar, ...</div>
-        <div class="pub-venue">EMNLP 2025 (Main Track)</div>
+        <div class="pub-venue">EMNLP 2025 (Main Track) <span class="pub-links"><a
+              href="https://aclanthology.org/2025.emnlp-main.1023.pdf" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/FannOrFlop" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
+            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fas fa-quote-right"></i> 8+ Citations</span>
+          <span
             style="display:inline-block; background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-download"></i> 2.1K+ Dataset Downloads</span>
+              class="fas fa-download"></i> 3.2K+ Dataset Downloads</span>
         </div>
       </div>
 
@@ -225,7 +343,10 @@
       <div class="pub-item">
         <div class="pub-title">XrayGPT: Chest Radiograph Summarization using Medical VLMs</div>
         <div class="pub-authors">Omkar Thawakar et al.</div>
-        <div class="pub-venue">ACL-Workshop 2024</div>
+        <div class="pub-venue">ACL-Workshop 2024 <span class="pub-links"><a
+              href="https://aclanthology.org/2024.bionlp-1.35.pdf" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="https://github.com/mbzuai-oryx/XrayGPT"
+              class="pub-link-btn pub-link-github" target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -242,19 +363,27 @@
       <div class="pub-item">
         <div class="pub-title">3D Mitochondria Instance Segmentation with Spatio-Temporal Transformers</div>
         <div class="pub-authors">Omkar Thawakar et al.</div>
-        <div class="pub-venue">MICCAI 2023</div>
+        <div class="pub-venue">MICCAI 2023 <span class="pub-links"><a href="https://arxiv.org/pdf/2303.12073"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/OmkarThawakar/STT-UNET" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">Fast Video Instance Segmentation via Recurrent Encoder Transformers</div>
         <div class="pub-authors">Omkar Thawakar et al.</div>
-        <div class="pub-venue">CAIP 2023</div>
+        <div class="pub-venue">CAIP 2023 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">Video Instance Segmentation via Multi-Scale Spatio-Temporal Attention</div>
         <div class="pub-authors">Omkar Thawakar et al.</div>
-        <div class="pub-venue">ECCV 2022</div>
+        <div class="pub-venue">ECCV 2022 <span class="pub-links"><a href="https://arxiv.org/pdf/2304.01200"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/OmkarThawakar/OWVISFormer" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -265,7 +394,9 @@
       <div class="pub-item">
         <div class="pub-title">Video Instance Segmentation in an Open-World</div>
         <div class="pub-authors">Omkar Thawakar et al.</div>
-        <div class="pub-venue">International Journal of Computer Vision (IJCV), 2024</div>
+        <div class="pub-venue">International Journal of Computer Vision (IJCV), 2024 <span class="pub-links"><a href="#"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#"
+              class="pub-link-btn pub-link-github" target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -277,7 +408,9 @@
         <div class="pub-title">Image and video super resolution using recurrent generative adversarial network</div>
         <div class="pub-authors">Omkar Thawakar et al.</div>
         <div class="pub-venue">IEEE international conference on advanced video and signal based surveillance (AVSS),
-          2019</div>
+          2019 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv" target="_blank"><i
+                class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -290,7 +423,9 @@
           segmentation</div>
         <div class="pub-authors">Prashant W Patil, Omkar Thawakar et al.</div>
         <div class="pub-venue">IEEE international conference on image processing (ICIP),
-          2019</div>
+          2019 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv" target="_blank"><i
+                class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -301,29 +436,21 @@
       <!-- Under Review / Preprints -->
       <h2 class="pub-category">Under Review / Preprints</h2>
 
-      <div class="pub-item">
-        <div class="pub-title">EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
-        <div class="pub-notes">
-          <span
-            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-quote-right"></i> 3 Citations</span>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">CoVR-R: Reason-Aware Composed Video Retrieval</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
-      </div>
 
       <div class="pub-item">
         <div class="pub-title">Mobile-O: Unified Multimodal Understanding & Generation on Mobile</div>
         <div class="pub-authors">A. Shaker, Omkar Thawakar et al.</div>
+        <div class="pub-venue">Preprint <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">LLM Post-Training: A Deep Dive into Reasoning Large Language Models</div>
         <div class="pub-authors">Komal Kumar, Omkar Thawakar et al.</div>
+        <div class="pub-venue">Preprint <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -337,7 +464,9 @@
       <div class="pub-item">
         <div class="pub-title">Ain: The arabic inclusive large multimodal model</div>
         <div class="pub-authors">Ahmed Heakl, Sara Ghaboura, Omkar Thawakar, ...</div>
-        <div class="pub-venue">Preprint 2025</div>
+        <div class="pub-venue">Preprint 2025 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -354,7 +483,9 @@
       <div class="pub-item">
         <div class="pub-title">Dynamic pre-training: Towards efficient and scalable all-in-one image restoration</div>
         <div class="pub-authors">Akshay Dudhane, Omkar Thawakar et al.</div>
-        <div class="pub-venue">Preprint 2024</div>
+        <div class="pub-venue">Preprint 2024 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i

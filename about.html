@@ -4,228 +4,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Omkar Thawakar</title>
+  <meta name="description"
+    content="About Omkar Thawakar, an MBZUAI PhD researcher working on multimodal reasoning, video understanding, and adaptive AI systems.">
+  <meta name="theme-color" content="#ffffff">
+  <title>About — Omkar Thawakar</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-
-  <canvas id="ai-background"></canvas>
+<body id="top" class="academic-home academic-about-page">
+  <a class="academic-skip-link" href="#main">Skip to main content</a>
+  <canvas id="ai-background" aria-hidden="true"></canvas>
 
   <header class="container">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
       <a class="navbar-brand" href="index.html">Omkar Thawakar</a>
-      <button class="mobile-menu-toggle">
-        <i class="fas fa-bars"></i>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+        aria-label="Open navigation">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
-      <div class="navbar-nav">
+      <div id="primary-navigation" class="navbar-nav">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link active" href="about.html">About</a>
         <a class="nav-link" href="experience.html">Experience</a>
         <a class="nav-link" href="publications.html">Publications</a>
         <a class="nav-link" href="projects.html">Projects</a>
-        <a class="nav-link" href="Omkar_Thawakar_CV.pdf" target="_blank">CV</a>
         <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="Omkar_Thawakar_CV.pdf" target="_blank">CV</a>
         <a class="nav-link" href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="animate-fade-in">
-      <h1 class="section-title">About Me</h1>
-
-      <div style="font-size: 1.1rem; color: #444; margin-bottom: 2rem;">
-        <p>I am a <strong>PhD researcher at the Mohamed bin Zayed University of Artificial Intelligence
-            (MBZUAI)</strong>, specializing in <strong>video understanding, multimodal learning, and large multimodal
-            models (LMMs)</strong>. I am fortunate to be advised by <strong>Prof. Fahad Khan</strong> and <strong>Dr.
-            Salman
-            Khan</strong>.</p>
-
-        <p>My research explores <strong>composed video retrieval, open-world video instance segmentation, multimodal
-            reasoning, and self-evolving agentic systems</strong>. I am driven by the goal of designing AI systems that
-          can <strong>reason,
-            adapt, and generalize beyond closed-world assumptions</strong>.</p>
-
+  <main id="main">
+    <section class="academic-page academic-about-hero" aria-labelledby="about-page-title">
+      <div>
+        <p class="academic-overline">About / Research profile</p>
+        <h1 id="about-page-title">Researching AI systems that reason, adapt, and generalize.</h1>
       </div>
-
-      <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem;">
-        <div style="flex: 1; min-width: 300px;">
-          <h2 class="section-title">Research Interests</h2>
-          <h3 style="color: var(--primary-color);">Primary</h3>
-          <ul style="list-style: circle; padding-left: 1.5rem;">
-            <li>Multimodal Learning & Reasoning</li>
-            <li>Video Understanding & Retrieval</li>
-            <li>Vision-Language Models (VLMs)</li>
-            <li>Large Multimodal Models (LMMs)</li>
-            <li>Agentic & Self-Evolving AI</li>
-            <li>Open-World Learning</li>
-          </ul>
-
-          <h3 style="color: var(--primary-color);">Secondary</h3>
-          <ul style="list-style: circle; padding-left: 1.5rem;">
-            <li>Efficient & Transparent LLMs</li>
-            <li>Multilingual & Cultural AI</li>
-            <li>Retrieval-Augmented Generation</li>
-            <li>World Models & Long-Horizon Reasoning</li>
-          </ul>
-        </div>
-
-        <div style="flex: 1; min-width: 300px;">
-          <h2 class="section-title">Teaching & Service</h2>
-          <h3 style="font-size: 1.1rem; font-weight: 600;">Teaching Assistant — MBZUAI</h3>
-          <ul style="margin-bottom: 1.5rem;">
-            <li>Computer Vision</li>
-            <li>Multimodal Learning</li>
-          </ul>
-
-          <h3 style="font-size: 1.1rem; font-weight: 600;">Reviewer</h3>
-          <p>CVPR, ICCV, ECCV, IJCV, ACL, TPAMI</p>
-          <p><strong>50+</strong> papers reviewed</p>
+      <div class="academic-about-hero-copy">
+        <p>
+          I work across multimodal reasoning, video understanding, large multimodal models, and self-evolving AI—with
+          a focus on research that can move from controlled benchmarks into useful real-world systems.
+        </p>
+        <div class="academic-about-actions">
+          <a href="Omkar_Thawakar_CV.pdf" target="_blank" rel="noreferrer">Curriculum vitae ↗</a>
+          <a href="mailto:omkar.thawakar@mbzuai.ac.ae">Email</a>
         </div>
       </div>
+    </section>
 
-      <!-- People Section -->
-      <section class="people-section">
-        <h2 class="section-title">Working With:</h2>
-
-        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">PhD Advisors</h3>
-        <div class="people-grid">
-          <div class="person-card">
-            <img src="images/people/FahadKhan.jpg" alt="Fahad Khan" class="person-img">
-            <div class="person-name">Prof. Fahad Khan</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/raoanwer.jpg" alt="Rao Anwer" class="person-img">
-            <div class="person-name">Dr. Rao Anwer</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/SalmanKhan.jpg" alt="Salman Khan" class="person-img">
-            <div class="person-name">Dr. Salman Khan</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
+    <section class="academic-page academic-index-section" aria-labelledby="biography-title">
+      <header class="academic-section-index">
+        <h2 id="biography-title">Biography</h2>
+      </header>
+      <div class="academic-section-content academic-about-layout">
+        <div class="academic-biography">
+          <p class="academic-lead">
+            I am a PhD researcher at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI).
+          </p>
+          <p>
+            My research spans multimodal reasoning, composed video retrieval, open-world video instance segmentation,
+            large multimodal models, and self-evolving agentic systems. I am fortunate to be advised by Prof. Fahad
+            Khan, Dr. Rao Anwer, and Dr. Salman Khan.
+          </p>
+          <p>
+            I am particularly interested in connecting foundational research with real-world deployment. My work
+            includes efficient language models, on-device multimodal retrieval, and applied AI platforms. During my
+            PhD, I am also working as a Research Scientist Intern at Adobe Research from June to September 2026.
+          </p>
         </div>
 
-        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">Collaborators & Mentors</h3>
-        <div class="people-grid">
-          <div class="person-card">
-            <img src="images/people/mubarak_shah.jpeg" alt="Mubarak Shah" class="person-img">
-            <div class="person-name">Prof. Mubarak Shah</div>
-            <div class="person-role">UCF</div>
+        <dl class="academic-record">
+          <div>
+            <dt>Research Scientist Intern · Jun 2026–Sep 2026</dt>
+            <dd>Adobe Research</dd>
           </div>
-          <div class="person-card">
-            <img src="images/people/tim.jpg" alt="Timothy Baldwin" class="person-img">
-            <div class="person-name">Prof. Timothy Baldwin</div>
-            <div class="person-role">Provost, MBZUAI</div>
+          <div>
+            <dt>PhD Researcher · Aug 2023–present</dt>
+            <dd>Mohamed bin Zayed University of Artificial Intelligence, UAE</dd>
           </div>
-          <div class="person-card">
-            <img src="images/people/eric_xing.jpg" alt="Eric Xing" class="person-img">
-            <div class="person-name">Prof. Eric Xing</div>
-            <div class="person-role">President, MBZUAI</div>
+          <div>
+            <dt>Researcher · Nov 2021–Jul 2023</dt>
+            <dd>Mohamed bin Zayed University of Artificial Intelligence, UAE</dd>
           </div>
-          <div class="person-card">
-            <img src="images/people/ivan.jpg" alt="Ivan Laptev" class="person-img">
-            <div class="person-name">Prof. Ivan Laptev</div>
-            <div class="person-role">MBZUAI</div>
+          <div>
+            <dt>Machine Learning Engineer · Feb 2020–May 2021</dt>
+            <dd>Chefling India Pvt. Ltd.</dd>
           </div>
-          <div class="person-card">
-            <img src="images/people/ming.jpeg" alt="Ming-Hsuan Yang" class="person-img">
-            <div class="person-name">Prof. Ming-Hsuan Yang</div>
-            <div class="person-role">UC Merced; Google DeepMind</div>
+          <div>
+            <dt>Research Assistant · Jan 2019–Feb 2021</dt>
+            <dd>Indian Institute of Technology Ropar, India</dd>
           </div>
-          <div class="person-card">
-            <img src="images/people/Michael Felsberg.jpeg" alt="Michael Felsberg" class="person-img">
-            <div class="person-name">Prof. Michael Felsberg</div>
-            <div class="person-role">Linköping Univ</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/jorma.jpg" alt="Jorma Laaksonen" class="person-img">
-            <div class="person-name">Dr. Jorma Laaksonen</div>
-            <div class="person-role">Aalto Univ</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/muzammal.jpeg" alt="Muzammal Naseer" class="person-img">
-            <div class="person-name">Dr. Muzammal Naseer</div>
-            <div class="person-role">Khalifa University</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/hisham_cholakkal.jpeg" alt="Hisham Chalakkal" class="person-img">
-            <div class="person-name">Dr. Hisham Chalakkal</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/haris_khan.jpeg" alt="Haris Khan" class="person-img">
-            <div class="person-name">Dr. Haris Khan</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="academic-page academic-index-section" aria-labelledby="interests-title">
+      <header class="academic-section-index">
+        <h2 id="interests-title">Research interests</h2>
+      </header>
+      <div class="academic-section-content">
+        <p class="academic-section-intro">
+          My research connects multimodal understanding with efficient, adaptive, and deployable intelligence.
+        </p>
+        <ol class="academic-research-list">
+          <li>
+            <h3>Multimodal Learning and Reasoning</h3>
+            <p>Grounded reasoning across images, video, language, and structured information using large multimodal
+              models.</p>
+            <small>Primary</small>
+          </li>
+          <li>
+            <h3>Video Understanding and Retrieval</h3>
+            <p>Composed retrieval, temporal understanding, dense video modifications, and explainable media search.</p>
+            <small>Primary</small>
+          </li>
+          <li>
+            <h3>Agentic and Self-Evolving AI</h3>
+            <p>Systems that improve through continuous feedback, tool use, retrieval, and interaction with real
+              environments.</p>
+            <small>Primary</small>
+          </li>
+          <li>
+            <h3>Open-World Learning</h3>
+            <p>Visual systems that identify unknown concepts and generalize beyond fixed vocabularies and closed-world
+              assumptions.</p>
+            <small>Primary</small>
+          </li>
+          <li>
+            <h3>Efficient and Transparent Models</h3>
+            <p>Compact LLMs and LMMs designed for reproducibility, interpretability, and resource-constrained
+              deployment.</p>
+            <small>Secondary</small>
+          </li>
+          <li>
+            <h3>Multilingual and Cultural AI</h3>
+            <p>Evaluation and adaptation of multimodal systems across languages, cultures, and specialist domains.</p>
+            <small>Secondary</small>
+          </li>
+          <li>
+            <h3>Retrieval and Long-Horizon Reasoning</h3>
+            <p>Retrieval-augmented generation, world models, and structured reasoning over extended contexts.</p>
+            <small>Secondary</small>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="academic-page academic-index-section" aria-labelledby="service-title">
+      <header class="academic-section-index">
+        <h2 id="service-title">Teaching &amp; service</h2>
+      </header>
+      <div class="academic-section-content">
+        <p class="academic-section-intro">
+          Teaching support and peer-review service across computer vision, multimodal learning, and AI.
+        </p>
+        <div class="academic-about-service-grid">
+          <article>
+            <span class="academic-record-meta">Teaching Assistant · MBZUAI</span>
+            <h3>Computer Vision</h3>
+            <p>Teaching support for graduate-level computer vision coursework.</p>
+          </article>
+          <article>
+            <span class="academic-record-meta">Teaching Assistant · MBZUAI</span>
+            <h3>Multimodal Learning</h3>
+            <p>Teaching support covering modern vision-language and multimodal learning methods.</p>
+          </article>
+          <article>
+            <span class="academic-record-meta">Peer Review</span>
+            <h3>Leading AI and vision venues</h3>
+            <p>Reviewer for CVPR, ICCV, ECCV, IJCV, ACL, and TPAMI.</p>
+          </article>
+          <article>
+            <span class="academic-record-meta">Academic Service</span>
+            <h3>200+ reviews completed</h3>
+            <p>Contributing detailed peer review across computer vision, multimodal AI, and machine learning.</p>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">Applied AI Leadership Mentors</h3>
-        <div class="people-grid">
-          <div class="person-card">
-            <img src="images/people/tim.jpg" alt="Timothy Baldwin" class="person-img">
-            <div class="person-name">Prof. Timothy Baldwin</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/FahadKhan.jpg" alt="Fahad Khan" class="person-img">
-            <div class="person-name">Prof. Fahad Khan</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/SalmanKhan.jpg" alt="Salman Khan" class="person-img">
-            <div class="person-name">Dr. Salman Khan</div>
-            <div class="person-role">MBZUAI</div>
-          </div>
-        </div>
+    <section class="academic-page academic-index-section" aria-labelledby="people-title">
+      <header class="academic-section-index">
+        <h2 id="people-title">Working with</h2>
+      </header>
+      <div class="academic-section-content">
+        <p class="academic-section-intro">
+          Advisors, mentors, and collaborators who have shaped my research and applied AI work.
+        </p>
 
-        <h3 style="color: var(--text-muted); margin-bottom: 1.5rem;">Bachelor's Advisors</h3>
-        <div class="people-grid">
-          <div class="person-card">
-            <img src="images/people/smurala.jpg" alt="Subrahmanyam Murala" class="person-img">
-            <div class="person-name">Dr. Subrahmanyam Murala</div>
-            <div class="person-role">Trinity College Dublin</div>
+        <section class="academic-people-group" aria-labelledby="advisors-title">
+          <h3 id="advisors-title">PhD advisors</h3>
+          <div class="academic-person-grid">
+            <article class="academic-person-card">
+              <img src="images/people/FahadKhan.jpg" alt="Fahad Khan" loading="lazy" decoding="async">
+              <div><strong>Prof. Fahad Khan</strong><small>MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/raoanwer.jpg" alt="Rao Anwer" loading="lazy" decoding="async">
+              <div><strong>Dr. Rao Anwer</strong><small>MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/SalmanKhan.jpg" alt="Salman Khan" loading="lazy" decoding="async">
+              <div><strong>Dr. Salman Khan</strong><small>MBZUAI</small></div>
+            </article>
           </div>
-          <div class="person-card">
-            <img src="images/people/uday_kulkarni.jpeg" alt="Fahad Khan" class="person-img">
-            <div class="person-name">Prof. Uday Kulkarni</div>
-            <div class="person-role">SGGS</div>
-          </div>
-          <div class="person-card">
-            <img src="images/people/pnalwade.jpeg" alt="Salman Khan" class="person-img">
-            <div class="person-name">Mr. Prakash Nalwade</div>
-            <div class="person-role">SGGS</div>
-          </div>
-        </div>
+        </section>
 
-      </section>
+        <section class="academic-people-group" aria-labelledby="collaborators-title">
+          <h3 id="collaborators-title">Collaborators &amp; mentors</h3>
+          <div class="academic-person-grid">
+            <article class="academic-person-card">
+              <img src="images/people/mubarak_shah.jpeg" alt="Mubarak Shah" loading="lazy" decoding="async">
+              <div><strong>Prof. Mubarak Shah</strong><small>University of Central Florida</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/tim.jpg" alt="Timothy Baldwin" loading="lazy" decoding="async">
+              <div><strong>Prof. Timothy Baldwin</strong><small>Provost, MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/eric_xing.jpg" alt="Eric Xing" loading="lazy" decoding="async">
+              <div><strong>Prof. Eric Xing</strong><small>President, MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/ivan.jpg" alt="Ivan Laptev" loading="lazy" decoding="async">
+              <div><strong>Prof. Ivan Laptev</strong><small>MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/ming.jpeg" alt="Ming-Hsuan Yang" loading="lazy" decoding="async">
+              <div><strong>Prof. Ming-Hsuan Yang</strong><small>UC Merced · Google DeepMind</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/Michael Felsberg.jpeg" alt="Michael Felsberg" loading="lazy" decoding="async">
+              <div><strong>Prof. Michael Felsberg</strong><small>Linköping University</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/jorma.jpg" alt="Jorma Laaksonen" loading="lazy" decoding="async">
+              <div><strong>Dr. Jorma Laaksonen</strong><small>Aalto University</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/muzammal.jpeg" alt="Muzammal Naseer" loading="lazy" decoding="async">
+              <div><strong>Dr. Muzammal Naseer</strong><small>Khalifa University</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/hisham_cholakkal.jpeg" alt="Hisham Cholakkal" loading="lazy" decoding="async">
+              <div><strong>Dr. Hisham Cholakkal</strong><small>MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/haris_khan.jpeg" alt="Haris Khan" loading="lazy" decoding="async">
+              <div><strong>Dr. Haris Khan</strong><small>MBZUAI</small></div>
+            </article>
+          </div>
+        </section>
 
+        <section class="academic-people-group" aria-labelledby="leadership-title">
+          <h3 id="leadership-title">Applied AI leadership mentors</h3>
+          <div class="academic-person-grid">
+            <article class="academic-person-card">
+              <img src="images/people/tim.jpg" alt="Timothy Baldwin" loading="lazy" decoding="async">
+              <div><strong>Prof. Timothy Baldwin</strong><small>MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/FahadKhan.jpg" alt="Fahad Khan" loading="lazy" decoding="async">
+              <div><strong>Prof. Fahad Khan</strong><small>MBZUAI</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/SalmanKhan.jpg" alt="Salman Khan" loading="lazy" decoding="async">
+              <div><strong>Dr. Salman Khan</strong><small>MBZUAI</small></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="academic-people-group" aria-labelledby="bachelors-title">
+          <h3 id="bachelors-title">Bachelor’s advisors</h3>
+          <div class="academic-person-grid">
+            <article class="academic-person-card">
+              <img src="images/people/smurala.jpg" alt="Subrahmanyam Murala" loading="lazy" decoding="async">
+              <div><strong>Dr. Subrahmanyam Murala</strong><small>Trinity College Dublin</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/uday_kulkarni.jpeg" alt="Uday Kulkarni" loading="lazy" decoding="async">
+              <div><strong>Prof. Uday Kulkarni</strong><small>SGGS</small></div>
+            </article>
+            <article class="academic-person-card">
+              <img src="images/people/pnalwade.jpeg" alt="Prakash Nalwade" loading="lazy" decoding="async">
+              <div><strong>Mr. Prakash Nalwade</strong><small>SGGS</small></div>
+            </article>
+          </div>
+        </section>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Omkar Thawakar.</p>
+  <footer class="academic-page academic-footer">
+    <p>&copy; 2026 Omkar Thawakar</p>
+    <div>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact page</a>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
-  <!-- Lawa AI Chatbot -->
   <script src="https://lawa-chatbot-widget.netlify.app/chatbot-widget.js"
     data-api-key="cb_X2hI9110PWPpMKoHxnpzUPxY5k7KM7z2C6E-RuNYipc" data-api-base="wss://chat.lawa.app"
     data-api-url="https://chat.lawa.app" data-chatbot-name="AI Assistant" data-theme="light"
-    data-position="bottom-right" data-primary-color="#2563eb" data-text-color="#ffffff"
+    data-position="bottom-right" data-primary-color="#1557d6" data-text-color="#ffffff"
     data-greeting="Hello! How can I help you today?" data-placeholder="Type your message..."
     data-chatbot-tone="professional" data-response-length="balanced" data-language="en"
     data-enable-typing-indicator="true" data-enable-sound-notifications="false" data-max-retries="3"
     data-reconnect-delay="2000" async>
-    </script>
+  </script>
 </body>
 
 </html>

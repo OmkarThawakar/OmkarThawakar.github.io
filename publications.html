@@ -44,6 +44,11 @@
       margin-top: 0.25rem;
     }
 
+    .pub-authors strong {
+      color: var(--text-color);
+      font-weight: 700;
+    }
+
     .pub-venue {
       font-style: italic;
       color: #0056b3;
@@ -90,33 +95,49 @@
       border-color: #9ca3af;
     }
 
-    .pub-link-arxiv {
+    .academic-home .pub-link-arxiv,
+    .academic-home .pub-link-arxiv i {
       color: #b31b1b;
+    }
+
+    .academic-home .pub-link-arxiv {
       border-color: #e5c3c3;
       background-color: #fcf4f4;
     }
 
-    .pub-link-arxiv:hover {
-      background-color: #b31b1b;
-      color: #ffffff;
-      border-color: #b31b1b;
+    .academic-home .pub-link-arxiv:hover,
+    .academic-home .pub-link-arxiv:hover i {
+      color: #941919;
     }
 
-    .pub-link-github {
+    .academic-home .pub-link-arxiv:hover {
+      background-color: #efd0d0;
+      border-color: #cb8585;
+    }
+
+    .academic-home .pub-link-github,
+    .academic-home .pub-link-github i {
       color: #24292f;
+    }
+
+    .academic-home .pub-link-github {
       border-color: #d0d7de;
       background-color: #f6f8fa;
     }
 
-    .pub-link-github:hover {
-      background-color: #24292f;
-      color: #ffffff;
-      border-color: #24292f;
+    .academic-home .pub-link-github:hover,
+    .academic-home .pub-link-github:hover i {
+      color: #111827;
+    }
+
+    .academic-home .pub-link-github:hover {
+      background-color: #d9dee5;
+      border-color: #929ca8;
     }
   </style>
 </head>
 
-<body>
+<body id="top" class="academic-home academic-site-page">
 
   <canvas id="ai-background"></canvas>
 
@@ -150,7 +171,8 @@
         style="border-left-color: #28a745; background: rgba(40,167,69,0.05); padding: 1rem; border-radius: 0 8px 8px 0;">
         <div class="pub-title">System and Method for Video Instance Segmentation via Multi-Scale Spatio-Temporal
           Transformers</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Sanath Narayan, Hisham Cholakkal, Rao Muhammad
+          Anwer, Muhammad Haris, Salman Khan, Fahad Khan</div>
         <div class="pub-venue">
           US Patent App. 17/983,841
           <span
@@ -164,7 +186,7 @@
         style="border-left-color: #28a745; background: rgba(40,167,69,0.05); padding: 1rem; border-radius: 0 8px 8px 0;">
         <div class="pub-title">System and method for video instance segmentation via recurrent encoder-based
           transformers</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Alexandre Rivkind, Ehud Ahissar, Fahad Khan</div>
         <div class="pub-venue">
           US Patent App. 18/435,537
           <span
@@ -179,7 +201,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Paying More Attention to Visual Tokens in Self-Evolving Large Multimodal Models</div>
-        <div class="pub-authors">Shravan Venkatraman, Ritesh Thawkar, Omkar Thawakar et al.</div>
+        <div class="pub-authors">Shravan Venkatraman, Ritesh Thawkar, <strong>Omkar Thawakar</strong>, Rao Muhammad
+          Anwer, Hisham Cholakkal, Salman Khan, Fahad Shahbaz Khan</div>
         <div class="pub-venue">ECCV 2026 <span class="pub-links"><a href="https://arxiv.org/abs/2606.27373"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/VISE" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -188,7 +211,8 @@
 
       <div class="pub-item">
         <div class="pub-title">EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Shravan Venkatraman, Ritesh Thawkar, Abdelrahman M.
+          Shaker, Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan, Fahad Shahbaz Khan</div>
         <div class="pub-venue">CVPR 2026 (findings) <span class="pub-links"><a href="https://arxiv.org/pdf/2511.16672"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/EvoLMM" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -205,7 +229,8 @@
 
       <div class="pub-item">
         <div class="pub-title">CoVR-R: Reason-Aware Composed Video Retrieval</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Dmitry Demidov, Vaishnav Potlapalli, Bogireddy Sai
+          Prasanna Teja, Viswanatha Reddy Gajjala, Alaa Mostafa Lasheen, Rao Muhammad Anwer, Fahad Shahbaz Khan</div>
         <div class="pub-venue">CVPR 2026 (findings) <span class="pub-links"><a href="https://arxiv.org/abs/2603.20190"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/CoVR-R" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -221,9 +246,26 @@
       </div>
 
       <div class="pub-item">
+        <div class="pub-title">LLM Post-Training: A Deep Dive into Reasoning Large Language Models</div>
+        <div class="pub-authors">Komal Kumar, Tajamul Ashraf, <strong>Omkar Thawakar</strong>, Rao Muhammad Anwer,
+          Hisham Cholakkal, Mubarak Shah, Ming-Hsuan Yang, Phillip H. S. Torr, Salman H. Khan, Fahad Shahbaz Khan</div>
+        <div class="pub-venue">TPAMI <span class="pub-links"><a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
+        <div class="pub-notes">
+          <span
+            style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fab fa-github"></i> 2.2K+ GitHub Stars</span>
+          <span
+            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fas fa-quote-right"></i> 100+ Citations</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
         <div class="pub-title">Thinking Beyond Labels: Vocabulary-Free Fine-Grained Recognition using
           Reasoning-Augmented LMMs</div>
-        <div class="pub-authors">Dmitry Demidov, Zaigham Zaheer, Zongyan Han, Omkar Thawakar et al.</div>
+        <div class="pub-authors">Dmitry Demidov, Zaigham Zaheer, Zongyan Han, <strong>Omkar Thawakar</strong>, Rao
+          Muhammad Anwer</div>
         <div class="pub-venue">CVPR 2026 (Main) <span class="pub-links"><a href="https://arxiv.org/pdf/2512.18897"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/demidovd98/FiNDR" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -233,7 +275,8 @@
       <div class="pub-item">
         <div class="pub-title">DuwatBench: Bridging Language and Visual Heritage through an Arabic Calligraphy Benchmark
           for Multimodal Understanding</div>
-        <div class="pub-authors">Shubham Patle, Sara Ghaboura, ... Omkar Thawakar, et al.</div>
+        <div class="pub-authors">Shubham Patle, Sara Ghaboura, Hania Tariq, Mohammad Usman Khan, <strong>Omkar
+            Thawakar</strong>, Rao Muhammad Anwer, Salman H. Khan</div>
         <div class="pub-venue">EACL 2026 (Main) <span class="pub-links"><a href="https://arxiv.org/pdf/2601.19898"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/DuwatBench" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -247,7 +290,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Beyond Simple Edits: Composed Video Retrieval with Dense Modifications</div>
-        <div class="pub-authors">Omkar Thawakar, Dmitry Demidev, Ritesh Thawkar, et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Dmitry Demidov, Ritesh Thawkar, Rao Muhammad Anwer,
+          Mubarak Shah, Fahad Shahbaz Khan, Salman Khan</div>
         <div class="pub-venue">ICCV 2025 <span class="pub-links"><a
               href="https://openaccess.thecvf.com/content/ICCV2025/papers/Thawakar_Beyond_Simple_Edits_Composed_Video_Retrieval_with_Dense_Modifications_ICCV_2025_paper.pdf"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -268,7 +312,9 @@
 
       <div class="pub-item">
         <div class="pub-title">LlamaV-o1: Rethinking Step-by-Step Visual Reasoning in LLMs</div>
-        <div class="pub-authors">Omkar Thawakar, D Dissanayake, KP More, R Thawkar, A Heakl, N Ahsan, ...</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Dinura Dissanayake, Ketan Pravin More, Ritesh
+          Thawkar, Ahmed Heakl, Noor Ahsan, Yuhao Li, Mohammed Zumri, Jean Lahoud, Rao Muhammad Anwer, Hisham Cholakkal,
+          Ivan Laptev, Mubarak Shah, Fahad Shahbaz Khan, Salman H. Khan</div>
         <div class="pub-venue">ACL 2025 <span class="pub-links"><a
               href="https://aclanthology.org/2025.findings-acl.1247.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -292,7 +338,8 @@
 
       <div class="pub-item">
         <div class="pub-title">TimeTravel: A Benchmark for Historical & Cultural Artifact Understanding</div>
-        <div class="pub-authors">S Ghaboura, KP More, R Thawkar, W Al Ghallabi, O Thawakar, FS Khan, ...</div>
+        <div class="pub-authors">Sara Ghaboura, Ketan Pravin More, Ritesh Thawkar, Wafa Al Ghallabi, <strong>Omkar
+            Thawakar</strong>, Fahad Shahbaz Khan, Hisham Cholakkal, Salman H. Khan, Rao Muhammad Anwer</div>
         <div class="pub-venue">ACL 2025 <span class="pub-links"><a
               href="https://aclanthology.org/2025.findings-acl.1211.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -310,7 +357,8 @@
 
       <div class="pub-item">
         <div class="pub-title">MobiLLaMA: Towards Accurate & Lightweight Fully Transparent GPT</div>
-        <div class="pub-authors">Omkar Thawakar, A Vayani, S Khan, H Cholakal, RM Anwer, M Felsberg, ...</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Ashmal Vayani, Salman H. Khan, Hisham Cholakkal, Rao
+          Muhammad Anwer, Michael Felsberg, Tim Baldwin, Eric P. Xing, Fahad Shahbaz Khan</div>
         <div class="pub-venue">ICLR 2025 (Spotlight, Top-2%) <span class="pub-links"><a
               href="https://arxiv.org/abs/2402.16840" class="pub-link-btn pub-link-arxiv" target="_blank"><i
                 class="fas fa-file-pdf"></i> arXiv</a> <a href="https://github.com/mbzuai-oryx/MobiLlama"
@@ -330,7 +378,8 @@
 
       <div class="pub-item">
         <div class="pub-title">All Languages Matter: Evaluating LMMs on 100 Culturally Diverse Languages</div>
-        <div class="pub-authors">A Vayani, D Dissanayake, H Watawana, N Ahsan, N Sasikumar, ...</div>
+        <div class="pub-authors">A Vayani, D Dissanayake, H Watawana, N Ahsan, N Sasikumar, <strong>Omkar
+            Thawakar</strong> ...</div>
         <div class="pub-venue">CVPR 2025 (Highlight) <span class="pub-links"><a
               href="https://openaccess.thecvf.com/content/CVPR2025/papers/Vayani_All_Languages_Matter_Evaluating_LMMs_on_Culturally_Diverse_100_Languages_CVPR_2025_paper.pdf"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -348,7 +397,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Composed Video Retrieval via Enriched Context and Discriminative Embeddings</div>
-        <div class="pub-authors">Omkar Thawakar, M Naseer, RM Anwer, S Khan, M Felsberg, M Shah, ...</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Muzammal Naseer, Rao Muhammad Anwer, Salman H. Khan,
+          Michael Felsberg, Mubarak Shah, Fahad Shahbaz Khan</div>
         <div class="pub-venue">CVPR 2024 <span class="pub-links"><a
               href="https://openaccess.thecvf.com/content/CVPR2024/papers/Thawakar_Composed_Video_Retrieval_via_Enriched_Context_and_Discriminative_Embeddings_CVPR_2024_paper.pdf"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -363,7 +413,9 @@
 
       <div class="pub-item">
         <div class="pub-title">CAMEL-Bench: A Comprehensive Arabic LMM Benchmark</div>
-        <div class="pub-authors">S Ghaboura, A Heakl, O Thawakar, AHSA Alharthi, I Riahi, A Radman, ...</div>
+        <div class="pub-authors">Sara Ghaboura, Ahmed Heakl, <strong>Omkar Thawakar</strong>, Ali Husain Salem Abdulla
+          Alharthi, Ines Riahi, Abduljalil Radman, Jorma Laaksonen, Fahad Shahbaz Khan, Salman Khan, Rao Muhammad Anwer
+        </div>
         <div class="pub-venue">NAACL 2025 <span class="pub-links"><a
               href="https://aclanthology.org/2025.findings-naacl.105.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -381,7 +433,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Fann or Flop: A Benchmark for Arabic Poetry Understanding</div>
-        <div class="pub-authors">W Al Ghallabi, R Thawkar, S Ghaboura, KP More, O Thawakar, ...</div>
+        <div class="pub-authors">Wafa Al Ghallabi, Ritesh Thawkar, Sara Ghaboura, Ketan Pravin More, <strong>Omkar
+            Thawakar</strong>, Hisham Cholakkal, Salman Khan, Rao Muhammad Anwer</div>
         <div class="pub-venue">EMNLP 2025 (Main Track) <span class="pub-links"><a
               href="https://aclanthology.org/2025.emnlp-main.1023.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -400,7 +453,8 @@
 
       <div class="pub-item">
         <div class="pub-title">XrayGPT: Chest Radiograph Summarization using Medical VLMs</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Abdelrahman M. Shaker, Sahal Shaji Mullappilly,
+          Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan, Jorma Laaksonen, Fahad Shahbaz Khan</div>
         <div class="pub-venue">ACL-Workshop 2024 <span class="pub-links"><a
               href="https://aclanthology.org/2024.bionlp-1.35.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="https://github.com/mbzuai-oryx/XrayGPT"
@@ -420,7 +474,8 @@
 
       <div class="pub-item">
         <div class="pub-title">3D Mitochondria Instance Segmentation with Spatio-Temporal Transformers</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Rao Muhammad Anwer, Jorma Laaksonen, Orly Reiner,
+          Mubarak Shah, Fahad Shahbaz Khan</div>
         <div class="pub-venue">MICCAI 2023 <span class="pub-links"><a href="https://arxiv.org/pdf/2303.12073"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/OmkarThawakar/STT-UNET" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -429,7 +484,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Fast Video Instance Segmentation via Recurrent Encoder Transformers</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Alexandre Rivkind, Ehud Ahissar, Fahad Shahbaz Khan
+        </div>
         <div class="pub-venue">CAIP 2023 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
               target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
@@ -437,7 +493,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Video Instance Segmentation via Multi-Scale Spatio-Temporal Attention</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Sanath Narayan, Jiale Cao, Hisham Cholakkal, Rao
+          Muhammad Anwer, Muhammad Haris Khan, Salman Khan, Michael Felsberg, Fahad Shahbaz Khan</div>
         <div class="pub-venue">ECCV 2022 <span class="pub-links"><a href="https://arxiv.org/pdf/2304.01200"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/OmkarThawakar/OWVISFormer" class="pub-link-btn pub-link-github"
@@ -451,7 +508,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Video Instance Segmentation in an Open-World</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Sanath Narayan, Hisham Cholakkal, Rao Muhammad Anwer,
+          Salman H. Khan, Jorma Laaksonen, Mubarak Shah, Fahad Shahbaz Khan</div>
         <div class="pub-venue">International Journal of Computer Vision (IJCV), 2024 <span class="pub-links"><a href="#"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#"
               class="pub-link-btn pub-link-github" target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
@@ -464,7 +522,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Image and video super resolution using recurrent generative adversarial network</div>
-        <div class="pub-authors">Omkar Thawakar et al.</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Prashant W. Patil, Akshay Dudhane, Subrahmanyam
+          Murala, Uday Kulkarni</div>
         <div class="pub-venue">IEEE international conference on advanced video and signal based surveillance (AVSS),
           2019 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv" target="_blank"><i
                 class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
@@ -479,7 +538,8 @@
       <div class="pub-item">
         <div class="pub-title">Motion saliency based generative adversarial network for underwater moving object
           segmentation</div>
-        <div class="pub-authors">Prashant W Patil, Omkar Thawakar et al.</div>
+        <div class="pub-authors">Prashant W. Patil, <strong>Omkar Thawakar</strong>, Akshay Dudhane, Subrahmanyam
+          Murala</div>
         <div class="pub-venue">IEEE international conference on image processing (ICIP),
           2019 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv" target="_blank"><i
                 class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
@@ -497,31 +557,19 @@
 
       <div class="pub-item">
         <div class="pub-title">Mobile-O: Unified Multimodal Understanding & Generation on Mobile</div>
-        <div class="pub-authors">A. Shaker, Omkar Thawakar et al.</div>
-        <div class="pub-venue">Preprint <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
-              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
-              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">LLM Post-Training: A Deep Dive into Reasoning Large Language Models</div>
-        <div class="pub-authors">Komal Kumar, Omkar Thawakar et al.</div>
-        <div class="pub-venue">Preprint <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
-              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
-              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
-        <div class="pub-notes">
-          <span
-            style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fab fa-github"></i> 2.2K+ GitHub Stars</span>
-          <span
-            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-quote-right"></i> 100+ Citations</span>
+        <div class="pub-authors">Abdelrahman M. Shaker, Ahmed Heakl, Jaseel Muhammad Kaithakkodan, Ritesh Thawkar,
+          <strong>Omkar Thawakar</strong>, Senmao Li, Hisham Cholakkal, Ian Reid, Eric P. Xing, Salman H. Khan, Fahad
+          Shahbaz Khan
         </div>
+        <div class="pub-venue">Preprint <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
+              target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
       </div>
 
       <div class="pub-item">
         <div class="pub-title">Ain: The arabic inclusive large multimodal model</div>
-        <div class="pub-authors">Ahmed Heakl, Sara Ghaboura, Omkar Thawakar, ...</div>
+        <div class="pub-authors">Ahmed Heakl, Sara Ghaboura, <strong>Omkar Thawakar</strong>, Fahad Shahbaz Khan,
+          Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan</div>
         <div class="pub-venue">Preprint 2025 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
               target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
@@ -540,7 +588,8 @@
 
       <div class="pub-item">
         <div class="pub-title">Dynamic pre-training: Towards efficient and scalable all-in-one image restoration</div>
-        <div class="pub-authors">Akshay Dudhane, Omkar Thawakar et al.</div>
+        <div class="pub-authors">Akshay Dudhane, <strong>Omkar Thawakar</strong>, Syed Waqas Zamir, Salman H. Khan,
+          Fahad Shahbaz Khan, Ming-Hsuan Yang</div>
         <div class="pub-venue">Preprint 2024 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
               target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
@@ -569,9 +618,12 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Omkar Thawakar.</p>
+  <footer class="academic-page academic-footer">
+    <p>&copy; 2026 Omkar Thawakar</p>
+    <div>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact page</a>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
   <script src="js/script.js"></script>

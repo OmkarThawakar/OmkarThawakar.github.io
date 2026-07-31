@@ -4,27 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omkar Thawakar - PhD Researcher</title>
+  <meta name="description"
+    content="Academic profile of Omkar Thawakar, an MBZUAI PhD researcher working on multimodal reasoning, video understanding, large multimodal models, and agentic AI.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Omkar Thawakar — Multimodal AI Researcher</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-
-  <canvas id="ai-background"></canvas>
+<body class="academic-home">
+  <a class="academic-skip-link" href="#main">Skip to main content</a>
+  <canvas id="ai-background" aria-hidden="true"></canvas>
 
   <header class="container">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
       <a class="navbar-brand" href="index.html">Omkar Thawakar</a>
-      <button class="mobile-menu-toggle">
-        <i class="fas fa-bars"></i>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+        aria-label="Open navigation">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
-      <div class="navbar-nav">
+      <div id="primary-navigation" class="navbar-nav">
         <a class="nav-link active" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="experience.html">Experience</a>
@@ -37,287 +40,465 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero animate-fade-in"
-      style="display: flex; align-items: center; justify-content: center; gap: 4rem; text-align: left;">
-      <div class="hero-content">
-        <h1>Omkar Thawakar</h1>
-        <div class="hero-subtitle">
-          PhD Researcher | Multimodal AI | Video Understanding | LLMs & Agents
-        </div>
-        <p class="hero-text"
-          style="color: #555; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; display: inline-block; max-width: 600px;">
-          PhD researcher at <strong>MBZUAI</strong>, working on <strong>multimodal reasoning, video understanding, large
-            multimodal models (LMMs), and self-evolving AI systems</strong>, with strong focus on <strong>real-world
-            deployment</strong>.
+  <main id="main">
+    <section id="home" class="academic-page academic-hero" aria-labelledby="profile-name">
+      <figure class="academic-portrait">
+        <img src="images/omkar.jpg" alt="Omkar Thawakar" width="4000" height="2252">
+      </figure>
+
+      <div class="academic-identity">
+        <p class="academic-overline">PhD Researcher / Computer Vision</p>
+        <h1 id="profile-name">Omkar Thawakar</h1>
+        <p class="academic-role">PhD Researcher in Multimodal Artificial Intelligence</p>
+        <p class="academic-university">
+          Mohamed bin Zayed University of Artificial Intelligence
+        </p>
+        <p class="academic-summary">
+          Research in multimodal reasoning, video understanding and retrieval, large multimodal models,
+          self-evolving AI systems, and real-world deployment.
         </p>
 
-        <div class="social-links" style="justify-content: flex-start; margin-top: 1rem;">
-          <a href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en" target="_blank"
-            title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-          <a href="https://github.com/OmkarThawakar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/omkar-thawakar-8b9521161/" target="_blank" title="LinkedIn"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="mailto:thawakar.omkar@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="images/omkar.jpg" alt="Omkar Thawakar"
-          style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 5px solid white;">
-      </div>
-    </section>
-
-    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3rem 0;">
-
-    <div class="row" style="display: flex; flex-wrap: wrap; gap: 2rem;">
-      <!-- Highlights / News -->
-      <section class="col animate-fade-in" style="flex: 2; min-width: 300px;">
-        <h2 class="section-title">Highlights</h2>
-        <ul class="news-list">
-          <li><strong>[ECCV 2026]</strong> 1 paper accepted.</li>
-          <li><strong>[CVPR 2026]</strong> 3 papers accepted.</li>
-          <li><strong>[ICLR-SLLM 2025]</strong> Spotlight (Top-2%) for <strong>MobiLLaMA</strong>.</li>
-          <li><strong>[CVPR 2025]</strong> Highlight for <strong>All Languages Matter</strong> (LMM Evaluation).</li>
-          <li><strong>[Impact]</strong> <strong>300K+</strong> HuggingFace downloads across models.</li>
-          <li><strong>[Award]</strong> <strong>Khalifa Fund Entrepreneurship Competition Winner</strong> (250K AED).
+        <ul class="academic-profile-links" aria-label="Academic profiles and contact">
+          <li>
+            <a href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en" target="_blank" rel="noreferrer">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span>
+            </a>
           </li>
-          <li><strong>[Award]</strong> <strong>Sandook Al Watan Student Project Competition Winner</strong>.</li>
+          <li>
+            <a href="https://github.com/OmkarThawakar" target="_blank" rel="noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/omkar-thawakar-8b9521161/" target="_blank" rel="noreferrer">
+              <i class="fab fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="Omkar_Thawakar_CV.pdf" target="_blank" rel="noreferrer">
+              <i class="fas fa-file-lines" aria-hidden="true"></i><span>Curriculum vitae</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:omkar.thawakar@mbzuai.ac.ae">
+              <i class="fas fa-envelope" aria-hidden="true"></i><span>Email</span>
+            </a>
+          </li>
         </ul>
-      </section>
-
-      <!-- Featured Research (Selected from C.4, C.5, C.6, C.10) -->
-      <section class="col animate-fade-in" style="flex: 1.5; min-width: 300px;">
-        <h2 class="section-title">Spotlight Research</h2>
-        <div class="card" style="margin-bottom: 1rem;">
-          <div class="card-body" style="padding: 1rem;">
-            <h4 style="margin: 0; font-size: 1.1rem;">MobiLLaMA (ICLR 2025)</h4>
-            <p class="text-muted" style="margin: 0.5rem 0; font-size: 0.9rem;">Accurate & Lightweight Fully Transparent
-              GPT. 200K+ Downloads.</p>
-            <a href="#" style="font-size: 0.85rem;">Read Paper <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body" style="padding: 1rem;">
-            <h4 style="margin: 0; font-size: 1.1rem;">LlamaV-o1 (ACL 2025)</h4>
-            <p class="text-muted" style="margin: 0.5rem 0; font-size: 0.9rem;">Rethinking Step-by-Step Visual Reasoning
-              in LLMs.</p>
-            <a href="#" style="font-size: 0.85rem;">Read Paper <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <section class="animate-fade-in" style="margin-top: 4rem;">
-      <h2 class="section-title">Recent Projects</h2>
-      <!-- Nutrigenics Project -->
-      <article class="card startup-card visq-showcase"
-        style="background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(240,253,244,0.98)); border: 2px solid rgba(40,167,69,0.2);">
-        <div class="card-body">
-          <div
-            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1.5rem;">
-            <div style="flex: 2; min-width: 280px;">
-              <h3 class="card-title"
-                style="font-size: 1.6rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-leaf" style="color: #28a745;"></i> Nutrigenics.Care
-              </h3>
-              <div style="margin-bottom: 0.85rem; font-weight: 600; color: #28a745; letter-spacing: 0.01em;">
-                Personalized AI nutrition and lifestyle platform for health monitoring
-              </div>
-              <p class="card-text" style="font-size: 1rem; color: #4b5563; margin-bottom: 1rem;">
-                <strong>Nutrigenics.Care</strong> is an intelligent clinical nutrition platform that builds personalized
-                dietary recommendations. Powered by our proprietary <strong>Nutrition-GPT</strong> model, it offers
-                patients and wellness enthusiasts real-time diet analysis, macro-nutrient optimization, and lifestyle
-                advice cross-referenced with medical research.
-              </p>
-              <div class="feature-badge-row">
-                <span class="feature-badge"
-                  style="background: rgba(40,167,69,0.08); border: 1px solid rgba(40,167,69,0.12); color: #28a745;">Nutrition-GPT</span>
-                <span class="feature-badge"
-                  style="background: rgba(40,167,69,0.08); border: 1px solid rgba(40,167,69,0.12); color: #28a745;">Clinical
-                  Validation</span>
-                <span class="feature-badge"
-                  style="background: rgba(40,167,69,0.08); border: 1px solid rgba(40,167,69,0.12); color: #28a745;">Diet
-                  Coaching</span>
-                <span class="feature-badge"
-                  style="background: rgba(40,167,69,0.08); border: 1px solid rgba(40,167,69,0.12); color: #28a745;">Privacy-First</span>
-              </div>
-            </div>
-
-            <div style="flex: 1; min-width: 240px;">
-              <ul class="feature-list-compact">
-                <li>Integrates with clinical guidelines for medically sound nutritional feedback.</li>
-                <li>Generates personalized daily meal plans and targets based on biometric data.</li>
-                <li>Uses interactive AI chat to answer questions about ingredients, recipes, and allergies.</li>
-                <li>Maintains secure health records on-device or within private cloud sandboxes.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="research-strip"
-            style="border-left: 4px solid #28a745; background: rgba(40, 167, 69, 0.04); margin-top: 1.5rem;">
-            <div class="research-kicker" style="color: #28a745;">Grants & Funding</div>
-            <p class="research-copy">
-              Nutrigenics.Care has secured over <strong>$100K+ in grant funding</strong> and is an active member of the
-              <strong>Microsoft Founders Hub</strong>, receiving $150K in technical and infrastructure support.
-            </p>
-          </div>
-
-          <div class="screenshot-grid" aria-label="Nutrigenics app screenshots">
-            <figure class="screenshot-card"><img src="images/nutrigenics/1.png" alt="Nutrigenics screenshot 1"></figure>
-            <figure class="screenshot-card"><img src="images/nutrigenics/2.png" alt="Nutrigenics screenshot 2"></figure>
-            <figure class="screenshot-card"><img src="images/nutrigenics/3.png" alt="Nutrigenics screenshot 3"></figure>
-            <figure class="screenshot-card"><img src="images/nutrigenics/4.png" alt="Nutrigenics screenshot 4"></figure>
-            <figure class="screenshot-card"><img src="images/nutrigenics/5.png" alt="Nutrigenics screenshot 5"></figure>
-            <figure class="screenshot-card"><img src="images/nutrigenics/6.png" alt="Nutrigenics screenshot 6"></figure>
-          </div>
-        </div>
-      </article>
-
-      <article class="card startup-card visq-showcase"
-        style="background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(240,247,255,0.98)); border: 2px solid rgba(0,86,179,0.2); margin-top: 2rem;">
-        <div class="card-body">
-          <div
-            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1.5rem;">
-            <div style="flex: 2; min-width: 280px;">
-              <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 0.5rem;">
-                <img src="images/visq-app-logo.png" alt="VisQ app logo" class="app-logo-inline"> VisQ (Visual Query)
-              </h3>
-              <div
-                style="margin-bottom: 0.85rem; font-weight: 600; color: var(--primary-color); letter-spacing: 0.01em;">
-                iOS application for composed image and video retrieval on iPhone
-              </div>
-              <p class="card-text" style="font-size: 1rem; color: #4b5563; margin-bottom: 1rem;">
-                <strong>VisQ</strong> brings reason-aware visual retrieval to iPhone with an on-device
-                <strong>Qwen3-VL-2B</strong> Core ML runtime. Users can search personal media with natural language or
-                run composed retrieval using a <strong>reference image + edit prompt</strong>, then inspect
-                <strong>"Why This Matched"</strong> explanations powered by the model's reasoning capability.
-              </p>
-              <div class="feature-badge-row">
-                <span class="feature-badge">On-device AI</span>
-                <span class="feature-badge">Composed Retrieval</span>
-                <span class="feature-badge">Explainable Results</span>
-                <span class="feature-badge">Privacy-First</span>
-                <span class="feature-badge">Offline-First</span>
-              </div>
-            </div>
-
-            <div style="flex: 1; min-width: 240px;">
-              <ul class="feature-list-compact">
-                <li>Indexes local photos and videos directly from the iPhone photo library.</li>
-                <li>Supports text search and reference-image-guided retrieval with scene edits.</li>
-                <li>Surfaces human-readable match reasons and visual explanation chips.</li>
-                <li>Keeps embeddings, ranking, and inference on-device for privacy-preserving search.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="product-cta-row">
-            <a href="https://apps.apple.com/in/app/visq/id6761603326" target="_blank"
-              class="cta-button cta-button-apple">
-              <span class="cta-button-label"><i class="fab fa-apple"></i> App Store</span>
-              <span class="cta-button-meta">Download Now</span>
-            </a>
-            <a href="https://github.com/OmkarThawakar/VisQ" target="_blank" class="cta-button cta-button-github">
-              <span class="cta-button-label"><i class="fab fa-github"></i> GitHub</span>
-              <span class="cta-button-meta">Source code</span>
-            </a>
-          </div>
-
-          <div class="research-strip">
-            <div class="research-kicker">Built from research</div>
-            <p class="research-copy">
-              VisQ is based on our recent research work <strong>CoVR-R: Reason-Aware Composed Video Retrieval</strong>,
-              translating reason-aware composed retrieval into a practical iPhone app for local-first multimodal search.
-            </p>
-            <p class="research-copy" style="margin-top: 0.7rem;">
-              Available now on the <a href="https://apps.apple.com/in/app/visq/id6761603326" target="_blank">Apple App
-                Store</a>.
-            </p>
-            <div class="research-links">
-              <a href="https://arxiv.org/abs/2603.20190" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
-              <a href="https://github.com/mbzuai-oryx/CoVR-R" target="_blank"><i class="fab fa-github"></i> Research
-                GitHub</a>
-            </div>
-          </div>
-
-          <div class="screenshot-grid" aria-label="VisQ app screenshots">
-            <figure class="screenshot-card"><img src="images/screenshots/1.png" alt="VisQ screenshot 1"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/2.png" alt="VisQ screenshot 2"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/3.png" alt="VisQ screenshot 3"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/4.png" alt="VisQ screenshot 4"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/5.png" alt="VisQ screenshot 5"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/6.png" alt="VisQ screenshot 6"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/7.png" alt="VisQ screenshot 7"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/8.png" alt="VisQ screenshot 8"></figure>
-            <figure class="screenshot-card"><img src="images/screenshots/9.png" alt="VisQ screenshot 9"></figure>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Recent Publications / Preprints -->
-    <section class="animate-fade-in" style="margin-top: 4rem;">
-      <h2 class="section-title">Recent Preprints & Submitted Work</h2>
-      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-
-        <div style="margin-bottom: 1rem;">
-          <div style="font-weight: 600; font-size: 1.05rem;">EvoLMM: Self-Evolving Large Multimodal Models with
-            Continuous Rewards</div>
-          <div style="font-size: 0.95rem; color: #666;">Omkar Thawakar et al.</div>
-          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Accepted: CVPR 2026 (Findings)</div>
-        </div>
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
-
-        <div style="margin-bottom: 1rem;">
-          <div style="font-weight: 600; font-size: 1.05rem;">CoVR-R: Reason-Aware Composed Video Retrieval</div>
-          <div style="font-size: 0.95rem; color: #666;">Omkar Thawakar et al.</div>
-          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Accepted: CVPR 2026 (Findings)</div>
-        </div>
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
-
-        <div style="margin-bottom: 1rem;">
-          <div style="font-weight: 600; font-size: 1.05rem;">Mobile-O: Unified Multimodal Understanding & Generation on
-            Mobile</div>
-          <div style="font-size: 0.95rem; color: #666;">A. Shaker, Omkar Thawakar et al.</div>
-          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Submitted / Preprint</div>
-        </div>
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
-
-        <div>
-          <div style="font-weight: 600; font-size: 1.05rem;">LLM Post-Training: A Deep Dive into Reasoning Large
-            Language Models</div>
-          <div style="font-size: 0.95rem; color: #666;">Komal Kumar, Omkar Thawakar et al.</div>
-          <div style="font-style: italic; color: #888; font-size: 0.9rem;">Submitted / Preprint</div>
-        </div>
-
       </div>
     </section>
 
-    <div style="text-align: center; margin-top: 4rem;">
-      <a href="publications.html" class="btn">View All Publications <i class="fas fa-arrow-right"></i></a>
+    <div class="academic-page academic-profile-facts" aria-label="Profile facts">
+      <div><span>HF Model downloads</span><strong>700K+</strong></div>
+      <div><span>Granted US patents</span><strong>2</strong></div>
+      <div><span>ICLR 2025</span><strong>Spotlight · Top 2%</strong></div>
+      <div><span>Peer reviews completed</span><strong>200+</strong></div>
     </div>
 
+    <section id="about" class="academic-page academic-index-section" aria-labelledby="about-title">
+      <header class="academic-section-index">
+        <h2 id="about-title">Biography</h2>
+      </header>
+      <div class="academic-section-content academic-about-layout">
+        <div class="academic-biography">
+          <p class="academic-lead">
+            I am a PhD researcher at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI).
+          </p>
+          <p>
+            My research spans multimodal reasoning, composed video retrieval, open-world video instance segmentation,
+            large multimodal models, and self-evolving agentic systems. I am fortunate to be advised by Prof. Fahad
+            Khan, Dr. Rao Anwer, and Dr. Salman Khan.
+          </p>
+          <p>
+            I am particularly interested in connecting foundational research with real-world deployment. My work
+            includes efficient language models, on-device multimodal retrieval, and applied AI platforms. During my
+            PhD, I am also working as a Research Scientist Intern at Adobe Research from June to September 2026.
+            Before beginning my PhD, I worked across both academic research and production machine learning.
+          </p>
+        </div>
+
+        <dl class="academic-record">
+          <div>
+            <dt>Research Scientist Intern · Jun 2026–Sep 2026</dt>
+            <dd>Adobe Research</dd>
+          </div>
+          <div>
+            <dt>PhD Researcher · Aug 2023–present</dt>
+            <dd>Mohamed bin Zayed University of Artificial Intelligence, UAE</dd>
+          </div>
+          <div>
+            <dt>Researcher · Nov 2021–Jul 2023</dt>
+            <dd>Mohamed bin Zayed University of Artificial Intelligence, UAE</dd>
+          </div>
+          <div>
+            <dt>Machine Learning Engineer · Feb 2020–May 2021</dt>
+            <dd>Chefling India Pvt. Ltd.</dd>
+          </div>
+          <div>
+            <dt>Research Assistant · Jan 2019–Feb 2021</dt>
+            <dd>Indian Institute of Technology Ropar, India</dd>
+          </div>
+          <div>
+            <dt>B.Tech · Computer Science · 2015–2019</dt>
+            <dd>SGGS Institute of Engineering &amp; Technology, India</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="news" class="academic-page academic-index-section" aria-labelledby="news-title">
+      <header class="academic-section-index">
+        <h2 id="news-title">News</h2>
+      </header>
+      <div class="academic-section-content">
+        <p class="academic-section-intro">
+          Recent publications, research impact, awards, and technology-transfer milestones.
+        </p>
+        <ol class="academic-news-list">
+          <li>
+            <time datetime="2026">2026</time>
+            <div>
+              <h3>One paper accepted at ECCV 2026</h3>
+              <p>New work on visual-token attention in self-evolving large multimodal models.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026">2026</time>
+            <div>
+              <h3>Three papers accepted at CVPR 2026</h3>
+              <p>Research spanning self-evolving LMMs, reason-aware composed video retrieval, and fine-grained
+                recognition.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2025">2025</time>
+            <div>
+              <h3>MobiLLaMA receives an ICLR spotlight</h3>
+              <p>Recognized among the top 2% of submissions at the ICLR SLLM workshop.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2025">2025</time>
+            <div>
+              <h3>All Languages Matter selected as a CVPR highlight</h3>
+              <p>A multilingual evaluation of large multimodal models across 100 culturally diverse languages.</p>
+            </div>
+          </li>
+          <li>
+            <time>Award</time>
+            <div>
+              <h3>Khalifa Fund Entrepreneurship Competition winner</h3>
+              <p>Received a 250K AED award supporting applied AI innovation and deployment.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="research" class="academic-page academic-index-section" aria-labelledby="research-title">
+      <header class="academic-section-index">
+        <h2 id="research-title">Research</h2>
+      </header>
+      <div class="academic-section-content">
+        <p class="academic-section-intro">
+          Developing multimodal systems that reason about complex visual information, adapt through feedback, and
+          operate beyond closed-world assumptions.
+        </p>
+        <ol class="academic-research-list">
+          <li>
+            <h3>Multimodal Learning and Reasoning</h3>
+            <p>Large multimodal models, grounded visual reasoning, and step-by-step problem solving across images,
+              video, and language.</p>
+            <small>LlamaV-o1 · EvoLMM · VISE</small>
+          </li>
+          <li>
+            <h3>Video Understanding and Retrieval</h3>
+            <p>Composed video retrieval, dense modifications, temporal context modeling, and reason-aware media search.
+            </p>
+            <small>CoVR-R · BSE-CoVR · CoVR</small>
+          </li>
+          <li>
+            <h3>Open-World Visual Understanding</h3>
+            <p>Video instance segmentation and recognition systems that identify unknowns and learn beyond fixed
+              vocabularies.</p>
+            <small>OW-VISFormer · MSSTS</small>
+          </li>
+          <li>
+            <h3>Efficient and Transparent AI</h3>
+            <p>Compact language and multimodal models designed for reproducibility, deployment, and resource-limited
+              environments.</p>
+            <small>MobiLLaMA · On-device AI</small>
+          </li>
+          <li>
+            <h3>Agentic and Self-Evolving Systems</h3>
+            <p>Models and agents that improve through continuous rewards, tool use, retrieval, and interaction with
+              real environments.</p>
+            <small>Self-evolution · RAG · Agents</small>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="publications" class="academic-page academic-index-section" aria-labelledby="publications-title">
+      <header class="academic-section-index">
+        <h2 id="publications-title">Selected publications</h2>
+      </header>
+      <div class="academic-section-content">
+        <div class="academic-section-heading-row">
+          <p class="academic-section-intro">A selection of recent peer-reviewed work.</p>
+          <a class="academic-arrow-link" href="publications.html">Browse all publications →</a>
+        </div>
+
+        <div class="academic-publication-table">
+          <div class="academic-publication-head" aria-hidden="true">
+            <span>Year</span><span>Venue</span><span>Publication</span>
+          </div>
+
+          <article class="academic-publication-row">
+            <span class="academic-pub-year">2026</span>
+            <span class="academic-pub-venue">ECCV</span>
+            <div>
+              <h3>Paying More Attention to Visual Tokens in Self-Evolving Large Multimodal Models</h3>
+              <p>Shravan Venkatraman, Ritesh Thawkar, <strong>Omkar Thawakar</strong>, et al.</p>
+              <div class="academic-inline-links">
+                <a href="https://arxiv.org/abs/2606.27373" target="_blank" rel="noreferrer">Paper ↗</a>
+                <a href="https://github.com/mbzuai-oryx/VISE" target="_blank" rel="noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="academic-publication-row">
+            <span class="academic-pub-year">2026</span>
+            <span class="academic-pub-venue">CVPR</span>
+            <div>
+              <h3>EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards</h3>
+              <p><strong>Omkar Thawakar</strong>, et al.</p>
+              <div class="academic-inline-links">
+                <a href="https://arxiv.org/pdf/2511.16672" target="_blank" rel="noreferrer">Paper ↗</a>
+                <a href="https://github.com/mbzuai-oryx/EvoLMM" target="_blank" rel="noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="academic-publication-row">
+            <span class="academic-pub-year">2026</span>
+            <span class="academic-pub-venue">CVPR</span>
+            <div>
+              <h3>CoVR-R: Reason-Aware Composed Video Retrieval</h3>
+              <p><strong>Omkar Thawakar</strong>, et al.</p>
+              <div class="academic-inline-links">
+                <a href="https://arxiv.org/abs/2603.20190" target="_blank" rel="noreferrer">Paper ↗</a>
+                <a href="https://github.com/mbzuai-oryx/CoVR-R" target="_blank" rel="noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="academic-publication-row">
+            <span class="academic-pub-year">2025</span>
+            <span class="academic-pub-venue">ACL</span>
+            <div>
+              <h3>LlamaV-o1: Rethinking Step-by-Step Visual Reasoning in LLMs</h3>
+              <p><strong>Omkar Thawakar</strong>, et al.</p>
+              <div class="academic-inline-links">
+                <a href="https://aclanthology.org/2025.findings-acl.1247.pdf" target="_blank" rel="noreferrer">Paper
+                  ↗</a>
+                <a href="https://github.com/mbzuai-oryx/LlamaV-o1" target="_blank" rel="noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="academic-publication-row">
+            <span class="academic-pub-year">2025</span>
+            <span class="academic-pub-venue">ICLR</span>
+            <div>
+              <h3>MobiLLaMA: Towards Accurate &amp; Lightweight Fully Transparent GPT</h3>
+              <p><strong>Omkar Thawakar</strong>, et al. · Spotlight, Top 2%</p>
+              <div class="academic-inline-links">
+                <a href="https://arxiv.org/abs/2402.16840" target="_blank" rel="noreferrer">Paper ↗</a>
+                <a href="https://github.com/mbzuai-oryx/MobiLlama" target="_blank" rel="noreferrer">Code ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="academic-page academic-index-section" aria-labelledby="projects-title">
+      <header class="academic-section-index">
+        <h2 id="projects-title">Selected projects</h2>
+      </header>
+      <div class="academic-section-content">
+        <p class="academic-section-intro">
+          Representative systems spanning multimodal research, on-device intelligence, and applied AI.
+        </p>
+        <div class="academic-project-grid">
+          <article>
+            <span class="academic-record-meta">CVPR 2026 · Composed retrieval</span>
+            <h3>CoVR-R</h3>
+            <p>Reason-aware composed video retrieval that explains how reference media and edit instructions determine
+              a match.</p>
+            <div class="academic-project-links">
+              <a href="https://arxiv.org/abs/2603.20190" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://github.com/mbzuai-oryx/CoVR-R" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+          <article>
+            <span class="academic-record-meta">On-device multimodal AI · iOS</span>
+            <h3>VisQ</h3>
+            <p>An iPhone application for natural-language and reference-guided image and video retrieval with
+              on-device reasoning.</p>
+            <div class="academic-project-links">
+              <a href="https://apps.apple.com/in/app/visq/id6761603326" target="_blank" rel="noreferrer">App Store ↗</a>
+              <a href="https://github.com/OmkarThawakar/VisQ" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+          <article>
+            <span class="academic-record-meta">Personalized health AI</span>
+            <h3>Nutrigenics.Care</h3>
+            <p>A privacy-conscious nutrition and lifestyle platform combining conversational AI, health data, and
+              evidence-grounded guidance.</p>
+            <div class="academic-project-links">
+              <a href="projects.html">Project details →</a>
+            </div>
+          </article>
+          <article>
+            <span class="academic-record-meta">Efficient language models · ICLR 2025</span>
+            <h3>MobiLLaMA</h3>
+            <p>An accurate, lightweight, and fully transparent language model family designed for efficient research
+              and deployment.</p>
+            <div class="academic-project-links">
+              <a href="https://arxiv.org/abs/2402.16840" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://github.com/mbzuai-oryx/MobiLlama" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="people" class="academic-page academic-index-section" aria-labelledby="people-title">
+      <header class="academic-section-index">
+        <h2 id="people-title">People</h2>
+      </header>
+      <div class="academic-section-content">
+        <div class="academic-people-intro">
+          <div>
+            <span class="academic-record-meta">Collaboration, mentorship &amp; supervision</span>
+            <p>Students and researchers I have collaborated with, mentored, or supervised across multimodal AI, video
+              understanding, efficient learning, and applied research.</p>
+          </div>
+        </div>
+
+        <div class="academic-people-preview">
+          <article>
+            <h3>PhD students</h3>
+            <ul class="academic-preview-roster">
+              <li>
+                <img class="academic-preview-photo" src="images/people/phd_students/dmitry_demidov.jpeg"
+                  alt="Dmitry Demidov" loading="lazy" decoding="async">
+                <span><strong>Dmitry Demidov</strong><small>PhD student</small></span>
+              </li>
+              <li>
+                <img class="academic-preview-photo" src="images/people/phd_students/sara_ghaboura.png"
+                  alt="Sara Ghaboura" loading="lazy" decoding="async">
+                <span><strong>Sara Ghaboura</strong><small>PhD student</small></span>
+              </li>
+              <li>
+                <img class="academic-preview-photo" src="images/people/phd_students/wafa_alghallabi.jpeg"
+                  alt="Wafa Alghallabi" loading="lazy" decoding="async">
+                <span><strong>Wafa Alghallabi</strong><small>PhD student</small></span>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>Master’s students</h3>
+            <ul class="academic-preview-roster">
+              <li>
+                <img class="academic-preview-photo" src="images/people/ms_students/shravan_venkatraman.jpeg"
+                  alt="Shravan Venkatraman" loading="lazy" decoding="async">
+                <span><strong>Shravan Venkatraman</strong><small>Master’s student</small></span>
+              </li>
+              <li>
+                <img class="academic-preview-photo" src="images/people/ms_students/Ritesh_Thawkar.jpeg"
+                  alt="Ritesh Thawkar" loading="lazy" decoding="async">
+                <span><strong>Ritesh Thawkar</strong><small>Master’s student</small></span>
+              </li>
+              <li>
+                <img class="academic-preview-photo" src="images/people/ms_students/Ketan_More.jpeg" alt="Ketan More"
+                  loading="lazy" decoding="async">
+                <span><strong>Ketan More</strong><small>Master’s student</small></span>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>Researchers</h3>
+            <ul class="academic-preview-roster">
+              <li>
+                <img class="academic-preview-photo" src="images/people/researchers/Ashmal_Vayani.png"
+                  alt="Ashmal Vayani" loading="lazy" decoding="async">
+                <span><strong>Ashmal Vayani</strong><small>Master’s at UCF</small></span>
+              </li>
+              <li>
+                <span class="academic-preview-avatar" aria-hidden="true">NA</span>
+                <span><strong>Noor Ahsan</strong><small>Researcher</small></span>
+              </li>
+              <li>
+                <img class="academic-preview-photo" src="images/people/researchers/Ketan_More.jpeg" alt="Ketan More"
+                  loading="lazy" decoding="async">
+                <span><strong>Ketan More</strong><small>Researcher</small></span>
+              </li>
+              <li>
+                <img class="academic-preview-photo" src="images/people/researchers/Ritesh_Thawkar.jpeg"
+                  alt="Ritesh Thawkar" loading="lazy" decoding="async">
+                <span><strong>Ritesh Thawkar</strong><small>Researcher</small></span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="academic-page academic-index-section academic-contact-section"
+      aria-labelledby="contact-title">
+      <header class="academic-section-index">
+        <h2 id="contact-title">Contact</h2>
+      </header>
+      <div class="academic-section-content academic-contact-grid">
+        <div>
+          <span class="academic-field-label">Email</span>
+          <a class="academic-contact-email" href="mailto:omkar.thawakar@mbzuai.ac.ae">omkar.thawakar@mbzuai.ac.ae</a>
+          <a class="academic-contact-secondary" href="mailto:thawakar.omkar@gmail.com">thawakar.omkar@gmail.com</a>
+        </div>
+        <address>
+          <span class="academic-field-label">Location</span>
+          MBZUAI, Masdar City<br>
+          Abu Dhabi, United Arab Emirates
+          <a class="academic-contact-download" href="Omkar_Thawakar_CV.pdf" target="_blank" rel="noreferrer">
+            Download curriculum vitae ↓
+          </a>
+        </address>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Omkar Thawakar</p>
+  <footer class="academic-page academic-footer">
+    <p>&copy; 2026 Omkar Thawakar</p>
+    <div>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact page</a>
+      <a href="#home">Back to top ↑</a>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
-  <!-- Lawa AI Chatbot -->
   <script src="https://lawa-chatbot-widget.netlify.app/chatbot-widget.js"
     data-api-key="cb_X2hI9110PWPpMKoHxnpzUPxY5k7KM7z2C6E-RuNYipc" data-api-base="wss://chat.lawa.app"
     data-api-url="https://chat.lawa.app" data-chatbot-name="AI Assistant" data-theme="light"
-    data-position="bottom-right" data-primary-color="#2563eb" data-text-color="#ffffff"
+    data-position="bottom-right" data-primary-color="#1557d6" data-text-color="#ffffff"
     data-greeting="Hello! How can I help you today?" data-placeholder="Type your message..."
     data-chatbot-tone="professional" data-response-length="balanced" data-language="en"
     data-enable-typing-indicator="true" data-enable-sound-notifications="false" data-max-retries="3"
     data-reconnect-delay="2000" async>
     </script>
-
 </body>
 
 </html>

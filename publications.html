@@ -11,25 +11,214 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .pub-category {
-      margin-top: 3rem;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
+    .publication-archive {
+      padding-top: 46px;
+    }
+
+    .publication-hero {
+      display: grid;
+      padding-bottom: 28px;
+      grid-template-columns: minmax(320px, 1fr) minmax(320px, 0.95fr);
+      gap: 48px;
+    }
+
+    .publication-eyebrow {
+      margin: 0 0 10px;
+      color: var(--academic-blue);
+      font-size: 12px;
       font-weight: 700;
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 0.5rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .publication-hero h1 {
+      margin: 0;
+      color: var(--academic-ink);
+      background: none;
+      font-size: clamp(42px, 5vw, 58px);
+      font-weight: 650;
+      letter-spacing: -0.045em;
+      line-height: 1;
+      -webkit-text-fill-color: currentColor;
+    }
+
+    .publication-hero-copy {
+      margin: 0;
+      color: var(--academic-muted);
+      font-size: 16px;
+    }
+
+    .publication-scholar-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .publication-stats {
+      display: grid;
+      margin: 0 0 31px;
+      border-top: 1px solid var(--academic-line-dark);
+      border-bottom: 1px solid var(--academic-line-dark);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .publication-stats div {
+      padding: 14px 16px 13px;
+      border-right: 1px solid var(--academic-line);
+    }
+
+    .publication-stats div:first-child {
+      padding-left: 0;
+    }
+
+    .publication-stats div:last-child {
+      border-right: 0;
+    }
+
+    .publication-stats dt {
+      margin-bottom: 3px;
+      color: var(--academic-muted);
+      font-size: 11px;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .publication-stats dd {
+      margin: 0;
+      color: var(--academic-ink);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .publication-record-heading {
+      display: flex;
+      margin-bottom: 14px;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .publication-record-heading h2 {
+      margin: 0;
+      color: var(--academic-ink);
+      font-size: 19px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    #publication-result-count {
+      margin: 0;
+      color: var(--academic-muted);
+      font-size: 14px;
+    }
+
+    .publication-tools {
+      margin-bottom: 14px;
+      padding: 15px;
+      border: 1px solid var(--academic-line);
+      background: var(--academic-wash);
+    }
+
+    .publication-filter-grid {
+      display: grid;
+      align-items: end;
+      grid-template-columns: minmax(280px, 1fr) 180px 180px auto;
+      gap: 13px;
+    }
+
+    .publication-control {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .publication-control label {
+      color: #555b64;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .publication-control input,
+    .publication-control select,
+    .publication-reset {
+      width: 100%;
+      height: 43px;
+      padding: 0 12px;
+      color: var(--academic-ink);
+      border: 1px solid #b9c0ca;
+      border-radius: 0;
+      background: #fff;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .publication-reset {
+      width: auto;
+      color: var(--academic-blue);
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .publication-reset:hover {
+      color: #fff;
+      border-color: var(--academic-blue);
+      background: var(--academic-blue);
+    }
+
+    .publication-year-tabs {
+      display: flex;
+      margin: 0 0 28px;
+      padding: 0;
+      overflow-x: auto;
+      border-top: 1px solid var(--academic-line);
+      border-bottom: 1px solid var(--academic-line);
+      list-style: none;
+    }
+
+    .publication-year-tabs button {
+      min-width: 78px;
+      padding: 9px 16px;
+      color: var(--academic-ink);
+      border: 0;
+      border-right: 1px solid var(--academic-line);
+      background: #fff;
+      font-size: 12px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .publication-year-tabs button:hover,
+    .publication-year-tabs button[aria-pressed="true"] {
+      color: #fff;
+      background: var(--academic-blue);
+    }
+
+    .pub-category {
+      margin: 2.25rem 0 0;
+      padding: 0 0 9px;
+      color: var(--academic-ink);
+      border-bottom: 1px solid var(--academic-line-dark);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .pub-item {
-      margin-bottom: 1.5rem;
-      padding-left: 1rem;
+      margin: 0;
+      padding: 17px 12px;
+      border-bottom: 1px solid var(--academic-line);
       border-left: 3px solid transparent;
-      transition: border-left-color 0.2s;
+      transition: border-color 0.2s, background-color 0.2s;
     }
 
     .pub-item:hover {
-      border-left-color: var(--primary-color);
+      border-left-color: var(--academic-blue);
+      background: #fafbfd;
     }
 
     .pub-title {
@@ -50,10 +239,33 @@
     }
 
     .pub-venue {
-      font-style: italic;
-      color: #0056b3;
+      color: var(--academic-blue);
       margin-top: 0.25rem;
       font-weight: 500;
+    }
+
+    .pub-keywords {
+      display: flex;
+      margin-top: 8px;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .pub-keyword {
+      padding: 2px 7px;
+      color: #505864;
+      border: 1px solid #d5dbe3;
+      border-radius: 999px;
+      background: #f7f9fb;
+      font-size: 11px;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .pub-keyword:hover {
+      color: var(--academic-blue);
+      border-color: var(--academic-blue);
+      background: #f2f6ff;
     }
 
     .pub-notes {
@@ -134,6 +346,78 @@
       background-color: #d9dee5;
       border-color: #929ca8;
     }
+
+    .publication-empty {
+      margin: 28px 0;
+      padding: 28px;
+      color: var(--academic-muted);
+      border: 1px solid var(--academic-line);
+      background: var(--academic-wash);
+      text-align: center;
+    }
+
+    .publication-archive-footer {
+      margin: 42px 0 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--academic-line-dark);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .publication-hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .publication-filter-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .publication-control-search {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .publication-archive {
+        padding-top: 30px;
+      }
+
+      .publication-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .publication-stats div:nth-child(2) {
+        border-right: 0;
+      }
+
+      .publication-stats div:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--academic-line);
+      }
+
+      .publication-stats div:nth-child(3) {
+        padding-left: 0;
+      }
+
+      .publication-filter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-control-search {
+        grid-column: auto;
+      }
+
+      .publication-record-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .pub-links {
+        display: flex;
+        margin: 8px 0 0;
+      }
+    }
   </style>
 </head>
 
@@ -161,8 +445,58 @@
   </header>
 
   <main class="container">
-    <section class="animate-fade-in">
-      <h1 class="section-title">Publications</h1>
+    <section class="publication-archive animate-fade-in">
+      <header class="publication-hero">
+        <div>
+          <p class="publication-eyebrow">Academic profile / Publication archive</p>
+          <h1>Publications</h1>
+        </div>
+        <div>
+          <p class="publication-hero-copy">The complete publication record, arranged chronologically and searchable
+            by title, author, venue, year, or research keyword.</p>
+          <a class="publication-scholar-link"
+            href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&amp;hl=en" target="_blank"
+            rel="noreferrer">Google Scholar ↗</a>
+        </div>
+      </header>
+
+      <dl class="publication-stats" aria-label="Publication summary">
+        <div><dt>Unique publications</dt><dd id="publication-total">—</dd></div>
+        <div><dt>Publication years</dt><dd id="publication-year-count">—</dd></div>
+        <div><dt>Years represented</dt><dd id="publication-year-range">—</dd></div>
+        <div><dt>Archive sections</dt><dd id="publication-section-count">—</dd></div>
+      </dl>
+
+      <div class="publication-record-heading">
+        <h2>Full record</h2>
+        <p id="publication-result-count" aria-live="polite">Loading publications…</p>
+      </div>
+
+      <form id="publication-filters" class="publication-tools" role="search">
+        <div class="publication-filter-grid">
+          <div class="publication-control publication-control-search">
+            <label for="publication-search">Search publications</label>
+            <input id="publication-search" type="search" placeholder="Title, author, venue, or keyword"
+              autocomplete="off">
+          </div>
+          <div class="publication-control">
+            <label for="publication-year">Year</label>
+            <select id="publication-year"><option value="all">All years</option></select>
+          </div>
+          <div class="publication-control">
+            <label for="publication-order">Order</label>
+            <select id="publication-order">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="title">Title A–Z</option>
+            </select>
+          </div>
+          <button id="publication-reset" class="publication-reset" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <ul id="publication-year-tabs" class="publication-year-tabs" aria-label="Filter by publication year"></ul>
+      <p id="publication-empty" class="publication-empty" hidden>No publications match these filters.</p>
 
       <!-- Patents -->
       <h2 class="pub-category">Patents</h2>
@@ -249,8 +583,10 @@
         <div class="pub-title">LLM Post-Training: A Deep Dive into Reasoning Large Language Models</div>
         <div class="pub-authors">Komal Kumar, Tajamul Ashraf, <strong>Omkar Thawakar</strong>, Rao Muhammad Anwer,
           Hisham Cholakkal, Mubarak Shah, Ming-Hsuan Yang, Phillip H. S. Torr, Salman H. Khan, Fahad Shahbaz Khan</div>
-        <div class="pub-venue">TPAMI <span class="pub-links"><a href="#" class="pub-link-btn pub-link-github"
-              target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
+        <div class="pub-venue">TPAMI <span class="pub-links"><a href="https://arxiv.org/abs/2502.21321"
+              class="pub-link-btn pub-link-arxiv" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>
+              arXiv</a> <a href="#" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -605,7 +941,7 @@
 
 
 
-      <div style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">
+      <div class="publication-archive-footer">
         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem;">
           For a complete list of publications, citations, and metrics:
         </p>
@@ -626,6 +962,7 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+  <script src="js/publications.js"></script>
   <script src="js/script.js"></script>
   <!-- Lawa AI Chatbot -->
   <script src="https://lawa-chatbot-widget.netlify.app/chatbot-widget.js"

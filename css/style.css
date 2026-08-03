@@ -2237,3 +2237,28 @@ footer {
     font-size: clamp(32px, 10vw, 42px);
   }
 }
+
+/* Keep navigation aligned with each page shell and above mobile content. */
+.academic-home > header {
+  position: relative;
+  z-index: 1000;
+}
+
+.academic-home:not(.academic-site-page) > header.container {
+  width: var(--academic-page);
+  max-width: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.academic-home > main,
+.academic-home > footer {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .academic-home .navbar,
+  .academic-home .navbar-nav {
+    z-index: 1001;
+  }
+}

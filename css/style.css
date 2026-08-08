@@ -1336,6 +1336,15 @@ footer {
   line-height: 1.4;
 }
 
+.academic-news-highlight {
+  padding: 1px 6px 2px;
+  border-radius: 2px;
+  background: var(--academic-blue);
+  box-decoration-break: clone;
+  color: #fff;
+  -webkit-box-decoration-break: clone;
+}
+
 .academic-news-list p {
   max-width: 820px;
   margin-top: 4px;

@@ -208,6 +208,23 @@
       text-transform: uppercase;
     }
 
+    .pub-category-with-legend {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .publication-author-legend {
+      margin-left: auto;
+      color: var(--academic-muted);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-align: right;
+      text-transform: none;
+    }
+
     .pub-item {
       margin: 0;
       padding: 17px 12px;
@@ -227,6 +244,14 @@
       font-size: 1.1rem;
     }
 
+    .pub-title a {
+      color: inherit;
+    }
+
+    .pub-title a:hover {
+      color: var(--academic-blue);
+    }
+
     .pub-authors {
       color: var(--text-muted);
       font-size: 0.95rem;
@@ -242,6 +267,85 @@
       color: var(--academic-blue);
       margin-top: 0.25rem;
       font-weight: 500;
+    }
+
+    .pub-spotlight-badge {
+      display: inline-flex;
+      margin-left: 6px;
+      padding: 2px 8px;
+      align-items: center;
+      gap: 4px;
+      color: #7a4b00;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      background:
+        linear-gradient(#fff8df, #fff8df) padding-box,
+        linear-gradient(90deg, #ff4d6d, #ffb703, #2ec4b6, #3a86ff, #9b5de5, #ff4d6d) border-box;
+      background-position: 0 0, 0% 50%;
+      background-size: 100% 100%, 300% 100%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+      vertical-align: middle;
+      white-space: nowrap;
+      animation: spotlight-rainbow 4s linear infinite, spotlight-glow 2.4s ease-in-out infinite;
+    }
+
+    .pub-spotlight-badge i {
+      animation: spotlight-sparkle 2.6s ease-in-out infinite;
+    }
+
+    @keyframes spotlight-rainbow {
+      from {
+        background-position: 0 0, 0% 50%;
+      }
+
+      to {
+        background-position: 0 0, 100% 50%;
+      }
+    }
+
+    @keyframes spotlight-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 9px rgba(255, 77, 109, 0.34);
+      }
+
+      33% {
+        box-shadow: 0 0 11px rgba(46, 196, 182, 0.36);
+      }
+
+      66% {
+        box-shadow: 0 0 11px rgba(58, 134, 255, 0.38);
+      }
+    }
+
+    @keyframes spotlight-sparkle {
+
+      0%,
+      100% {
+        opacity: 0.8;
+        transform: scale(1) rotate(0deg);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.25) rotate(15deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .pub-spotlight-badge,
+      .pub-spotlight-badge i {
+        animation: none;
+      }
+
+      .pub-spotlight-badge {
+        background-size: 100% 100%, 100% 100%;
+      }
     }
 
     .pub-keywords {
@@ -413,6 +517,17 @@
         gap: 4px;
       }
 
+      .pub-category-with-legend {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .publication-author-legend {
+        margin-left: 0;
+        text-align: left;
+      }
+
       .pub-links {
         display: flex;
         margin: 8px 0 0;
@@ -454,17 +569,28 @@
         <div>
           <p class="publication-hero-copy">The complete publication record, arranged chronologically and searchable
             by title, author, venue, year, or research keyword.</p>
-          <a class="publication-scholar-link"
-            href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&amp;hl=en" target="_blank"
-            rel="noreferrer">Google Scholar ↗</a>
+          <a class="publication-scholar-link" href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&amp;hl=en"
+            target="_blank" rel="noreferrer">Google Scholar ↗</a>
         </div>
       </header>
 
       <dl class="publication-stats" aria-label="Publication summary">
-        <div><dt>Unique publications</dt><dd id="publication-total">—</dd></div>
-        <div><dt>Publication years</dt><dd id="publication-year-count">—</dd></div>
-        <div><dt>Years represented</dt><dd id="publication-year-range">—</dd></div>
-        <div><dt>Archive sections</dt><dd id="publication-section-count">—</dd></div>
+        <div>
+          <dt>Unique publications</dt>
+          <dd id="publication-total">—</dd>
+        </div>
+        <div>
+          <dt>Publication years</dt>
+          <dd id="publication-year-count">—</dd>
+        </div>
+        <div>
+          <dt>Years represented</dt>
+          <dd id="publication-year-range">—</dd>
+        </div>
+        <div>
+          <dt>Archive sections</dt>
+          <dd id="publication-section-count">—</dd>
+        </div>
       </dl>
 
       <div class="publication-record-heading">
@@ -481,7 +607,9 @@
           </div>
           <div class="publication-control">
             <label for="publication-year">Year</label>
-            <select id="publication-year"><option value="all">All years</option></select>
+            <select id="publication-year">
+              <option value="all">All years</option>
+            </select>
           </div>
           <div class="publication-control">
             <label for="publication-order">Order</label>
@@ -531,11 +659,25 @@
       </div>
 
       <!-- Conferences & Journals -->
-      <h2 class="pub-category">Conferences & Journals</h2>
+      <h2 class="pub-category pub-category-with-legend">
+        <span>Conferences &amp; Journals</span>
+        <small class="publication-author-legend">(− indicates joint first authors, + indicates my role as
+          mentor)</small>
+      </h2>
+
+      <div class="pub-item">
+        <div class="pub-title">How Good are Foundation Models in Longitudinal MRI Disease Progression Reasoning?</div>
+        <div class="pub-authors">Wafa Alghallabi, Ritesh Thawkar, Sara Ghaboura, <strong>Omkar Thawakar+</strong>,
+          Numan Saeed, Dr. Danas, Ajnas Alkatheeri, Salman Khan, Fahad Khan</div>
+        <div class="pub-venue">MICCAI 2026 <span class="pub-spotlight-badge"><i class="fas fa-star"
+              aria-hidden="true"></i> Spotlight</span> <span class="pub-links"><a href="#"
+              class="pub-link-btn pub-link-arxiv"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#"
+              class="pub-link-btn pub-link-github"><i class="fab fa-github"></i> GitHub</a></span></div>
+      </div>
 
       <div class="pub-item">
         <div class="pub-title">Paying More Attention to Visual Tokens in Self-Evolving Large Multimodal Models</div>
-        <div class="pub-authors">Shravan Venkatraman, Ritesh Thawkar, <strong>Omkar Thawakar</strong>, Rao Muhammad
+        <div class="pub-authors">Shravan Venkatraman, Ritesh Thawkar, <strong>Omkar Thawakar+</strong>, Rao Muhammad
           Anwer, Hisham Cholakkal, Salman Khan, Fahad Shahbaz Khan</div>
         <div class="pub-venue">ECCV 2026 <span class="pub-links"><a href="https://arxiv.org/abs/2606.27373"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -544,28 +686,10 @@
       </div>
 
       <div class="pub-item">
-        <div class="pub-title">EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards</div>
-        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Shravan Venkatraman, Ritesh Thawkar, Abdelrahman M.
-          Shaker, Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan, Fahad Shahbaz Khan</div>
-        <div class="pub-venue">CVPR 2026 (findings) <span class="pub-links"><a href="https://arxiv.org/pdf/2511.16672"
-              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
-              href="https://github.com/mbzuai-oryx/EvoLMM" class="pub-link-btn pub-link-github" target="_blank"><i
-                class="fab fa-github"></i> GitHub</a></span></div>
-        <div class="pub-notes">
-          <span
-            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-quote-right"></i> 20+ Citations</span>
-          <span
-            style="display:inline-block; background:#fff3e0; color:#e65100; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
-              class="fas fa-cube"></i> 2.5k+ Model Downloads</span>
-        </div>
-      </div>
-
-      <div class="pub-item">
         <div class="pub-title">CoVR-R: Reason-Aware Composed Video Retrieval</div>
         <div class="pub-authors"><strong>Omkar Thawakar</strong>, Dmitry Demidov, Vaishnav Potlapalli, Bogireddy Sai
           Prasanna Teja, Viswanatha Reddy Gajjala, Alaa Mostafa Lasheen, Rao Muhammad Anwer, Fahad Shahbaz Khan</div>
-        <div class="pub-venue">CVPR 2026 (findings) <span class="pub-links"><a href="https://arxiv.org/abs/2603.20190"
+        <div class="pub-venue">BMVC 2026 <span class="pub-links"><a href="https://arxiv.org/abs/2603.20190"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/CoVR-R" class="pub-link-btn pub-link-github" target="_blank"><i
                 class="fab fa-github"></i> GitHub</a></span></div>
@@ -580,13 +704,31 @@
       </div>
 
       <div class="pub-item">
+        <div class="pub-title">EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards</div>
+        <div class="pub-authors"><strong>Omkar Thawakar</strong>, Shravan Venkatraman, Ritesh Thawkar, Abdelrahman M.
+          Shaker, Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan, Fahad Shahbaz Khan</div>
+        <div class="pub-venue">arXiv Preprint <span class="pub-links"><a href="https://arxiv.org/pdf/2511.16672"
+              class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
+              href="https://github.com/mbzuai-oryx/EvoLMM" class="pub-link-btn pub-link-github" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a></span></div>
+        <div class="pub-notes">
+          <span
+            style="display:inline-block; background:#eef; color:#0056b3; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fas fa-quote-right"></i> 20+ Citations</span>
+          <span
+            style="display:inline-block; background:#fff3e0; color:#e65100; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
+              class="fas fa-cube"></i> 2.5k+ Model Downloads</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
         <div class="pub-title">LLM Post-Training: A Deep Dive into Reasoning Large Language Models</div>
-        <div class="pub-authors">Komal Kumar, Tajamul Ashraf, <strong>Omkar Thawakar</strong>, Rao Muhammad Anwer,
+        <div class="pub-authors">Komal Kumar, Tajamul Ashraf, <strong>Omkar Thawakar+</strong>, Rao Muhammad Anwer,
           Hisham Cholakkal, Mubarak Shah, Ming-Hsuan Yang, Phillip H. S. Torr, Salman H. Khan, Fahad Shahbaz Khan</div>
         <div class="pub-venue">TPAMI <span class="pub-links"><a href="https://arxiv.org/abs/2502.21321"
               class="pub-link-btn pub-link-arxiv" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>
-              arXiv</a> <a href="#" class="pub-link-btn pub-link-github" target="_blank"><i
-                class="fab fa-github"></i> GitHub</a></span></div>
+              arXiv</a> <a href="#" class="pub-link-btn pub-link-github" target="_blank"><i class="fab fa-github"></i>
+              GitHub</a></span></div>
         <div class="pub-notes">
           <span
             style="display:inline-block; background:#fff3cd; color:#856404; padding:2px 8px; border-radius:12px; font-size:0.8rem; margin-right:0.5rem;"><i
@@ -600,7 +742,7 @@
       <div class="pub-item">
         <div class="pub-title">Thinking Beyond Labels: Vocabulary-Free Fine-Grained Recognition using
           Reasoning-Augmented LMMs</div>
-        <div class="pub-authors">Dmitry Demidov, Zaigham Zaheer, Zongyan Han, <strong>Omkar Thawakar</strong>, Rao
+        <div class="pub-authors">Dmitry Demidov, Zaigham Zaheer, Zongyan Han, <strong>Omkar Thawakar+</strong>, Rao
           Muhammad Anwer</div>
         <div class="pub-venue">CVPR 2026 (Main) <span class="pub-links"><a href="https://arxiv.org/pdf/2512.18897"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -609,10 +751,23 @@
       </div>
 
       <div class="pub-item">
+        <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11492440/" target="_blank"
+            rel="noreferrer">A Multi-Agent Diffusion Approach for MRI Anomaly Segmentation via Modality-Specific LoRA
+            Specialization</a></div>
+        <div class="pub-authors">Wafa Al Ghallabi, Muhammad Zaigham Zaheer, Ritesh Thawkar, <strong>Omkar
+            Thawakar+</strong>, Salman Khan, Fahad Shahbaz Khan</div>
+        <div class="pub-venue">WACV 2026 <span class="pub-links"><a
+              href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11492440"
+              class="pub-link-btn pub-link-arxiv" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i>
+              arXiv</a> <a href="https://github.com/wafaAlghallabi/MRI-Router" class="pub-link-btn pub-link-github"
+              target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a></span></div>
+      </div>
+
+      <div class="pub-item">
         <div class="pub-title">DuwatBench: Bridging Language and Visual Heritage through an Arabic Calligraphy Benchmark
           for Multimodal Understanding</div>
         <div class="pub-authors">Shubham Patle, Sara Ghaboura, Hania Tariq, Mohammad Usman Khan, <strong>Omkar
-            Thawakar</strong>, Rao Muhammad Anwer, Salman H. Khan</div>
+            Thawakar+</strong>, Rao Muhammad Anwer, Salman H. Khan</div>
         <div class="pub-venue">EACL 2026 (Main) <span class="pub-links"><a href="https://arxiv.org/pdf/2601.19898"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/DuwatBench" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -675,7 +830,7 @@
       <div class="pub-item">
         <div class="pub-title">TimeTravel: A Benchmark for Historical & Cultural Artifact Understanding</div>
         <div class="pub-authors">Sara Ghaboura, Ketan Pravin More, Ritesh Thawkar, Wafa Al Ghallabi, <strong>Omkar
-            Thawakar</strong>, Fahad Shahbaz Khan, Hisham Cholakkal, Salman H. Khan, Rao Muhammad Anwer</div>
+            Thawakar+</strong>, Fahad Shahbaz Khan, Hisham Cholakkal, Salman H. Khan, Rao Muhammad Anwer</div>
         <div class="pub-venue">ACL 2025 <span class="pub-links"><a
               href="https://aclanthology.org/2025.findings-acl.1211.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -695,7 +850,8 @@
         <div class="pub-title">MobiLLaMA: Towards Accurate & Lightweight Fully Transparent GPT</div>
         <div class="pub-authors"><strong>Omkar Thawakar</strong>, Ashmal Vayani, Salman H. Khan, Hisham Cholakkal, Rao
           Muhammad Anwer, Michael Felsberg, Tim Baldwin, Eric P. Xing, Fahad Shahbaz Khan</div>
-        <div class="pub-venue">ICLR 2025 (Spotlight, Top-2%) <span class="pub-links"><a
+        <div class="pub-venue">ICLR 2025 <span class="pub-spotlight-badge"><i class="fas fa-star"
+              aria-hidden="true"></i> Spotlight · Top 2%</span> <span class="pub-links"><a
               href="https://arxiv.org/abs/2402.16840" class="pub-link-btn pub-link-arxiv" target="_blank"><i
                 class="fas fa-file-pdf"></i> arXiv</a> <a href="https://github.com/mbzuai-oryx/MobiLlama"
               class="pub-link-btn pub-link-github" target="_blank"><i class="fab fa-github"></i> GitHub</a></span></div>
@@ -715,8 +871,9 @@
       <div class="pub-item">
         <div class="pub-title">All Languages Matter: Evaluating LMMs on 100 Culturally Diverse Languages</div>
         <div class="pub-authors">A Vayani, D Dissanayake, H Watawana, N Ahsan, N Sasikumar, <strong>Omkar
-            Thawakar</strong> ...</div>
-        <div class="pub-venue">CVPR 2025 (Highlight) <span class="pub-links"><a
+            Thawakar+</strong> ...</div>
+        <div class="pub-venue">CVPR 2025 <span class="pub-spotlight-badge"><i class="fas fa-star"
+              aria-hidden="true"></i> Highlight</span> <span class="pub-links"><a
               href="https://openaccess.thecvf.com/content/CVPR2025/papers/Vayani_All_Languages_Matter_Evaluating_LMMs_on_Culturally_Diverse_100_Languages_CVPR_2025_paper.pdf"
               class="pub-link-btn pub-link-arxiv" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
               href="https://github.com/mbzuai-oryx/ALM-Bench" class="pub-link-btn pub-link-github" target="_blank"><i
@@ -749,7 +906,7 @@
 
       <div class="pub-item">
         <div class="pub-title">CAMEL-Bench: A Comprehensive Arabic LMM Benchmark</div>
-        <div class="pub-authors">Sara Ghaboura, Ahmed Heakl, <strong>Omkar Thawakar</strong>, Ali Husain Salem Abdulla
+        <div class="pub-authors">Sara Ghaboura, Ahmed Heakl, <strong>Omkar Thawakar+</strong>, Ali Husain Salem Abdulla
           Alharthi, Ines Riahi, Abduljalil Radman, Jorma Laaksonen, Fahad Shahbaz Khan, Salman Khan, Rao Muhammad Anwer
         </div>
         <div class="pub-venue">NAACL 2025 <span class="pub-links"><a
@@ -770,7 +927,7 @@
       <div class="pub-item">
         <div class="pub-title">Fann or Flop: A Benchmark for Arabic Poetry Understanding</div>
         <div class="pub-authors">Wafa Al Ghallabi, Ritesh Thawkar, Sara Ghaboura, Ketan Pravin More, <strong>Omkar
-            Thawakar</strong>, Hisham Cholakkal, Salman Khan, Rao Muhammad Anwer</div>
+            Thawakar+</strong>, Hisham Cholakkal, Salman Khan, Rao Muhammad Anwer</div>
         <div class="pub-venue">EMNLP 2025 (Main Track) <span class="pub-links"><a
               href="https://aclanthology.org/2025.emnlp-main.1023.pdf" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a
@@ -894,7 +1051,7 @@
       <div class="pub-item">
         <div class="pub-title">Mobile-O: Unified Multimodal Understanding & Generation on Mobile</div>
         <div class="pub-authors">Abdelrahman M. Shaker, Ahmed Heakl, Jaseel Muhammad Kaithakkodan, Ritesh Thawkar,
-          <strong>Omkar Thawakar</strong>, Senmao Li, Hisham Cholakkal, Ian Reid, Eric P. Xing, Salman H. Khan, Fahad
+          <strong>Omkar Thawakar+</strong>, Senmao Li, Hisham Cholakkal, Ian Reid, Eric P. Xing, Salman H. Khan, Fahad
           Shahbaz Khan
         </div>
         <div class="pub-venue">Preprint <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
@@ -904,7 +1061,7 @@
 
       <div class="pub-item">
         <div class="pub-title">Ain: The arabic inclusive large multimodal model</div>
-        <div class="pub-authors">Ahmed Heakl, Sara Ghaboura, <strong>Omkar Thawakar</strong>, Fahad Shahbaz Khan,
+        <div class="pub-authors">Ahmed Heakl, Sara Ghaboura, <strong>Omkar Thawakar+</strong>, Fahad Shahbaz Khan,
           Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan</div>
         <div class="pub-venue">Preprint 2025 <span class="pub-links"><a href="#" class="pub-link-btn pub-link-arxiv"
               target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a> <a href="#" class="pub-link-btn pub-link-github"
